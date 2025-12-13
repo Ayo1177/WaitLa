@@ -1,0 +1,577 @@
+# Cursor Rules for WaitLa Digital Marketing Agency Website
+
+## Optimal Tech Stack Recommendation
+
+### Core Framework
+**Next.js 14+ (App Router)**
+- ✅ Built-in SSR/SSG for optimal SEO
+- ✅ Image optimization out of the box
+- ✅ API routes for form handling
+- ✅ Built-in i18n routing support
+- ✅ Automatic code splitting
+- ✅ Excellent Lighthouse scores
+- ✅ Vercel deployment (zero-config)
+
+**Why Next.js over React/Vue:**
+- SEO is critical for agency visibility → SSR/SSG essential
+- Performance requirements (<3s load) → Next.js optimizations
+- Multilingual routing → Next.js i18n is mature
+- Portfolio/content-heavy → SSG perfect for static content
+
+### Language & Type Safety
+**TypeScript**
+- Type safety for complex portfolio data structures
+- Better DX with autocomplete
+- Catch errors at build time
+- Essential for team collaboration
+
+### Styling
+**Tailwind CSS 3+**
+- Rapid UI development (matches PRD's modern aesthetic)
+- Mobile-first responsive utilities
+- Small bundle size with JIT
+- Easy customization for brand colors
+- Shadcn/ui components (built on Tailwind) for consistent UI
+
+**Why Tailwind over CSS-in-JS:**
+- Better performance (no runtime CSS-in-JS overhead)
+- Faster development for showcase sites
+- Easier to maintain consistent design system
+- Better for SSR/SSG
+
+### Animations
+**Framer Motion**
+- React-friendly API
+- Excellent performance with layout animations
+- Perfect for scroll animations, hover effects
+- Supports reduced motion preferences
+- Lightweight compared to GSAP for most use cases
+
+**Consider GSAP if:**
+- Complex timeline animations needed
+- Advanced scroll-triggered sequences
+- Timeline-based video-like animations
+
+### Content Management
+**Sanity CMS (Recommended)**
+- ✅ Excellent for portfolio/case studies
+- ✅ Real-time collaboration
+- ✅ Flexible content modeling
+- ✅ Built-in image optimization
+- ✅ Free tier generous for showcase sites
+- ✅ Great developer experience
+- ✅ Easy for non-technical team to update content
+
+**Alternative: Contentful**
+- More enterprise-focused
+- Better for larger teams
+- Higher cost for advanced features
+
+**Alternative: Strapi (Self-hosted)**
+- Full control over data
+- Good if you need custom backend logic
+- Requires hosting/maintenance
+
+### Forms & Validation
+**React Hook Form**
+- Performance (uncontrolled components)
+- Minimal re-renders
+- Great TypeScript support
+
+**Zod**
+- Schema validation
+- TypeScript type inference
+- Works seamlessly with React Hook Form
+
+**Form Submission:**
+- Next.js API routes
+- Email service: **Resend** (modern, developer-friendly) or SendGrid
+- Database: **Supabase** (PostgreSQL) for contact form submissions + analytics
+  - Free tier sufficient for showcase site
+  - Built-in auth if needed later
+  - Real-time capabilities
+
+### Internationalization
+**next-intl**
+- Built for Next.js App Router
+- Type-safe translations
+- SEO-friendly locale routing
+- Better than next-i18next for App Router
+
+**Translation Management:**
+- Store translations in Sanity CMS or JSON files
+- Consider Crowdin/Lokalise if multiple translators
+
+### Icons
+**Lucide React**
+- Modern, consistent icon set
+- Tree-shakeable
+- TypeScript support
+- Lightweight
+- Better than Font Awesome (smaller bundle)
+
+### Image & Media Handling
+**Next.js Image Component**
+- Automatic optimization
+- Lazy loading
+- Responsive images
+- WebP/AVIF support
+
+**Video:**
+- Use HTML5 `<video>` with proper attributes
+- Host on Vercel Blob Storage or Cloudflare R2
+- Consider Cloudinary for advanced video transformations
+
+### Database & Storage
+**Supabase (PostgreSQL)**
+- Contact form submissions
+- Analytics data (optional)
+- Free tier: 500MB database
+- Built-in REST API
+- Real-time subscriptions if needed
+
+**Alternative: Vercel Postgres**
+- Native Next.js integration
+- Serverless
+- Pay-as-you-go
+
+**File Storage:**
+- **Vercel Blob Storage** (images, videos)
+- Or **Cloudflare R2** (S3-compatible, cheaper)
+- Or **Cloudinary** (advanced image/video transformations)
+
+### Hosting & Deployment
+**Vercel (Primary Recommendation)**
+- Zero-config Next.js deployment
+- Automatic HTTPS
+- Global CDN
+- Preview deployments
+- Analytics included
+- Free tier generous for showcase sites
+
+**Alternative: Netlify**
+- Similar features to Vercel
+- Good Next.js support
+- Great for static sites
+
+### Analytics & Monitoring
+**Google Analytics 4**
+- Required per PRD
+- Track conversions, user behavior
+
+**Vercel Analytics**
+- Real-time performance metrics
+- Web Vitals tracking
+- Included with Vercel hosting
+
+**Optional: PostHog or Plausible**
+- Privacy-focused alternative
+- Better for GDPR compliance
+
+### SEO Tools
+**next-seo** or **next-sitemap**
+- Generate sitemap.xml
+- robots.txt
+- Meta tag management
+
+**Schema Markup:**
+- Use `next-seo` or manual JSON-LD
+- Organization, Service, Review schemas
+
+### Security
+**reCAPTCHA v3** or **Turnstile (Cloudflare)**
+- Form spam protection
+- Better UX than v2
+
+**Honeypot fields**
+- Additional spam protection
+- No user friction
+
+### Development Tools
+**Package Manager:**
+- **pnpm** (faster, disk-efficient) or **npm**
+
+**Linting & Formatting:**
+- **ESLint** (Next.js config)
+- **Prettier** (code formatting)
+
+**Testing (Optional for MVP):**
+- **Vitest** (unit tests)
+- **Playwright** (E2E tests for critical flows)
+
+### Performance Optimization
+**Bundle Analysis:**
+- `@next/bundle-analyzer`
+
+**Image Optimization:**
+- Next.js Image (automatic)
+- Consider **Sharp** for advanced transformations
+
+**Code Splitting:**
+- Automatic with Next.js
+- Dynamic imports for heavy components
+
+### Recommended Project Structure
+```
+waitla-website/
+├── app/                    # Next.js App Router
+│   ├── [locale]/          # i18n routes (en, fr)
+│   │   ├── about/
+│   │   ├── services/
+│   │   ├── portfolio/
+│   │   └── contact/
+│   ├── api/               # API routes (forms, etc.)
+│   └── layout.tsx
+├── components/
+│   ├── ui/                # Shadcn/ui components
+│   ├── sections/          # Page sections
+│   └── layout/            # Header, Footer, etc.
+├── lib/
+│   ├── sanity/            # Sanity client
+│   ├── utils.ts
+│   └── validations.ts     # Zod schemas
+├── public/
+│   └── assets/
+├── messages/              # i18n translations
+│   ├── en.json
+│   └── fr.json
+└── types/
+    └── index.ts
+```
+
+## Component-Level Acceptance Criteria
+
+### Global Components
+
+#### Header/Navigation
+- [ ] Sticky header with logo, navigation menu, language switcher (EN/FR), primary CTA button
+- [ ] Mobile hamburger menu with smooth animations
+- [ ] Active page indicator in navigation
+- [ ] Keyboard navigation support (Tab, Enter, Escape)
+- [ ] Accessible ARIA labels for all interactive elements
+- [ ] Smooth scroll behavior for anchor links
+
+#### Footer
+- [ ] Contact information (email, phone, address)
+- [ ] Social media links with icons
+- [ ] Secondary CTA button
+- [ ] Copyright and legal links
+- [ ] Responsive grid layout (1 col mobile, 3-4 col desktop)
+
+#### Language Switcher
+- [ ] Toggle between EN/FR with visual indicator
+- [ ] Preserves current page route when switching
+- [ ] Updates all content including URLs (en/about → fr/a-propos)
+- [ ] Stores preference in localStorage/cookie
+
+### Homepage Components
+
+#### Hero Section
+- [ ] Animated headline with typewriter or fade-in effect
+- [ ] High-quality hero image/video (megaphone/communication theme)
+- [ ] Primary CTA button ("Book a Call" or "Take it to the next level")
+- [ ] Trust badges/stats visible (projects count, clients, 5-star rating)
+- [ ] Mobile-optimized layout (stacked on small screens)
+- [ ] Lazy load video with poster image
+- [ ] Video autoplay muted with play/pause controls
+
+#### About Teaser Section
+- [ ] 2-3 sentence agency introduction
+- [ ] Three value propositions (Creativity, Relevance, Performance) as cards
+- [ ] Key statistics display (years, projects, clients, reviews)
+- [ ] Animated counters on scroll into view
+- [ ] "Learn More" link to About page
+
+#### Accreditations Section
+- [ ] Carousel or grid of certification badges
+- [ ] Hover tooltip with certification significance
+- [ ] Clickable badges linking to certification pages
+- [ ] Smooth infinite scroll or pagination
+- [ ] Mobile swipeable carousel
+
+#### Services Teaser
+- [ ] Grid of service cards (3-4 columns desktop, 1-2 mobile)
+- [ ] Each card: icon, title, brief description, "Learn More" link
+- [ ] Hover effect (lift, shadow, or color change)
+- [ ] Links to full Services page with anchor to specific service
+
+#### Portfolio Teaser
+- [ ] Featured projects grid (3-4 projects)
+- [ ] Each project card: client logo, project type, hero image, key metric
+- [ ] Hover overlay with brief description
+- [ ] Click opens project detail page
+- [ ] "View All Projects" CTA button
+- [ ] Lazy loading images with blur placeholder
+
+#### Influence Campaigns Section
+- [ ] Video gallery grid (autoplay muted on scroll)
+- [ ] Hover to show play button and brand logo
+- [ ] Click opens modal with full video player
+- [ ] Pause videos when out of viewport
+- [ ] Mobile: tap to play (no autoplay)
+
+#### Client References Section
+- [ ] Logo grid with filter by industry (optional)
+- [ ] Hover shows testimonial quote overlay
+- [ ] Trust-building copy: "We've partnered with..."
+- [ ] Smooth logo animations on scroll
+- [ ] Grayscale to color on hover
+
+#### Contact Strip
+- [ ] Mini contact form or prominent CTA
+- [ ] Click-to-call button (mobile)
+- [ ] Click-to-email link
+- [ ] Sticky bottom bar on mobile (optional)
+
+### Services Page Components
+
+#### Service Category Cards
+- [ ] 8 service categories displayed as cards
+- [ ] Each card: icon, title, brief description, CTA
+- [ ] Filterable/searchable (optional)
+- [ ] Smooth scroll to service detail on same page
+
+#### Service Detail Section
+- [ ] Full description (150-200 words)
+- [ ] Key benefits list (3-5 items)
+- [ ] Sample deliverables checklist
+- [ ] Related case study links
+- [ ] "Discuss this service" CTA button
+- [ ] Accordion or tabs for multiple services on one page
+
+### Portfolio Page Components
+
+#### Portfolio Filter
+- [ ] Filter by service type, industry, date
+- [ ] Active filter indicator
+- [ ] Smooth transition when filtering
+- [ ] URL updates with filter params (shareable links)
+- [ ] "Clear filters" button
+
+#### Project Grid
+- [ ] Responsive grid (masonry or uniform)
+- [ ] Lazy loading with intersection observer
+- [ ] Image/video thumbnails
+- [ ] Hover overlay with project title and category
+- [ ] Click opens project detail modal or page
+
+#### Project Detail Page/Modal
+- [ ] Hero image/video at top
+- [ ] Project metadata (client, date, services, industry)
+- [ ] Challenge section
+- [ ] Solution/Approach section
+- [ ] Key metrics/results display
+- [ ] Image/video gallery with lightbox
+- [ ] Client testimonial (if available)
+- [ ] Related projects carousel
+- [ ] Social share buttons
+- [ ] "Start Your Project" CTA
+
+### About Page Components
+
+#### Company Story Section
+- [ ] Mission statement
+- [ ] Founding story with timeline (optional)
+- [ ] Values display (cards or list)
+- [ ] Office/team photos gallery
+
+#### Statistics Display
+- [ ] Animated counters
+- [ ] Visual charts/graphs (optional)
+- [ ] Achievement badges
+
+### Team Page Components
+
+#### Team Member Cards
+- [ ] Professional photo (lazy loaded)
+- [ ] Name and role
+- [ ] Brief bio (expandable)
+- [ ] Social links (LinkedIn, Twitter)
+- [ ] Specialization tags
+- [ ] Hover effect with additional info
+
+#### Team Grid
+- [ ] Responsive grid layout
+- [ ] Filter by department/role (optional)
+- [ ] Search functionality (optional)
+
+### Contact Page Components
+
+#### Contact Form
+- [ ] Fields: Full Name, Email, Phone, Message
+- [ ] Inline validation with error messages
+- [ ] Success confirmation message
+- [ ] Loading state during submission
+- [ ] reCAPTCHA or honeypot spam protection
+- [ ] Accessible labels and error announcements
+
+#### Contact Information
+- [ ] Email address (click-to-email)
+- [ ] Phone number (click-to-call on mobile)
+- [ ] Physical address
+- [ ] Business hours
+- [ ] Google Maps embed (interactive)
+
+#### Alternative Contact Methods
+- [ ] Social media links
+- [ ] Calendar booking link (Calendly, etc.)
+- [ ] Live chat widget (optional)
+
+### Shared UI Components
+
+#### Buttons
+- [ ] Primary CTA style
+- [ ] Secondary style
+- [ ] Loading state
+- [ ] Disabled state
+- [ ] Hover and focus states
+- [ ] Accessible keyboard navigation
+
+#### Cards
+- [ ] Consistent padding and spacing
+- [ ] Hover effects
+- [ ] Responsive image handling
+- [ ] Accessible heading hierarchy
+
+#### Modals
+- [ ] Video player modal
+- [ ] Image lightbox
+- [ ] Form confirmation modal
+- [ ] Keyboard accessible (Escape to close, focus trap)
+- [ ] Backdrop click to close
+
+#### Forms
+- [ ] Consistent input styling
+- [ ] Error states with messages
+- [ ] Success states
+- [ ] Loading states
+- [ ] Accessible field labels and help text
+
+### Performance Requirements
+
+#### Image Optimization
+- [ ] All images use Next.js Image component
+- [ ] WebP/AVIF format with fallbacks
+- [ ] Proper sizing (srcset)
+- [ ] Lazy loading below fold
+- [ ] Blur placeholder for better UX
+
+#### Video Optimization
+- [ ] Compressed video files
+- [ ] Multiple quality options
+- [ ] Poster images
+- [ ] Lazy loading
+- [ ] Autoplay only when appropriate
+
+#### Code Splitting
+- [ ] Route-based code splitting (automatic)
+- [ ] Dynamic imports for heavy components
+- [ ] Lazy load animations library
+
+#### Caching
+- [ ] Static pages cached at CDN
+- [ ] API responses cached appropriately
+- [ ] Browser caching headers set
+
+### SEO Requirements
+
+#### Meta Tags
+- [ ] Unique title per page (60 chars max)
+- [ ] Unique description per page (160 chars max)
+- [ ] Open Graph tags
+- [ ] Twitter Card tags
+- [ ] Canonical URLs
+
+#### Schema Markup
+- [ ] Organization schema
+- [ ] Service schema
+- [ ] Review/Rating schema
+- [ ] Breadcrumb schema
+
+#### Technical SEO
+- [ ] Sitemap.xml generated
+- [ ] robots.txt configured
+- [ ] 301 redirects for old URLs
+- [ ] Internal linking strategy
+- [ ] Alt text on all images
+
+### Accessibility Requirements
+
+#### WCAG 2.1 Level AA
+- [ ] Color contrast ratios meet standards
+- [ ] Focus indicators visible
+- [ ] Keyboard navigation works throughout
+- [ ] Screen reader compatibility
+- [ ] ARIA labels where needed
+- [ ] Form error messages announced
+- [ ] Skip to content link
+
+#### Reduced Motion
+- [ ] Respects prefers-reduced-motion
+- [ ] Disables animations when requested
+- [ ] Maintains functionality without motion
+
+### Multilingual Requirements
+
+#### Content Translation
+- [ ] All text content translated
+- [ ] URLs translated (en/about, fr/a-propos)
+- [ ] Date/number formatting localized
+- [ ] RTL support prepared (if needed)
+
+#### Language Switching
+- [ ] Preserves current page context
+- [ ] Updates all dynamic content
+- [ ] Maintains user preference
+
+### Analytics & Tracking
+
+#### Event Tracking
+- [ ] CTA button clicks
+- [ ] Form submissions
+- [ ] Click-to-call actions
+- [ ] Click-to-email actions
+- [ ] Video play events
+- [ ] Portfolio filter usage
+- [ ] Scroll depth tracking
+
+#### Conversion Tracking
+- [ ] Contact form completions
+- [ ] Consultation bookings
+- [ ] Service page views
+- [ ] Portfolio project views
+
+### Security Requirements
+
+#### Form Security
+- [ ] reCAPTCHA v3 or Turnstile
+- [ ] Honeypot fields
+- [ ] Server-side validation
+- [ ] Rate limiting on API routes
+
+#### Data Protection
+- [ ] HTTPS enforced
+- [ ] Cookie consent banner (GDPR)
+- [ ] Privacy policy linked
+- [ ] Secure form submissions
+
+### Browser Support
+- [ ] Chrome (latest 2 versions)
+- [ ] Firefox (latest 2 versions)
+- [ ] Safari (latest 2 versions)
+- [ ] Edge (latest 2 versions)
+- [ ] Mobile browsers (iOS Safari, Chrome Mobile)
+
+### Testing Checklist
+- [ ] Responsive design (mobile, tablet, desktop)
+- [ ] Cross-browser testing
+- [ ] Form validation and submission
+- [ ] Language switching functionality
+- [ ] All links working
+- [ ] Images loading correctly
+- [ ] Videos playing correctly
+- [ ] Animations smooth
+- [ ] Performance metrics met
+- [ ] Accessibility audit passed
+- [ ] SEO audit passed
+

@@ -1,0 +1,154 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Dream Team", href: "/team" },
+  { name: "Our Services", href: "/services", hasDropdown: true },
+  { name: "Portfolio", href: "/portfolio" },
+];
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
+  return (
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] text-white shadow-lg">
+      <nav className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
+        <div className="flex items-center lg:flex-1">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+            <Image
+              src="/logo.jpg"
+              alt="WaitLa logo"
+              width={140}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
+          </Link>
+        </div>
+
+        <div className="flex items-center lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-white hover:bg-white/10 transition"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        <div className="hidden lg:flex lg:flex-1 lg:justify-center">
+          <div className="flex items-center gap-2 rounded-full border border-white/50 bg-white/10 px-3 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide transition",
+                  isActive(item.href)
+                    ? "bg-white text-primary-dark shadow-[0_10px_30px_rgba(255,255,255,0.25)]"
+                    : "text-white/90 hover:bg-white/15"
+                )}
+              >
+                {item.name}
+                {item.hasDropdown && (
+                  <ChevronDown className="h-4 w-4 opacity-70" />
+                )}
+              </Link>
+            ))}
+            <button className="flex items-center gap-2 rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white/90 transition hover:bg-white/15">
+              <span className="text-lg leading-none">🇬🇧</span>
+              <ChevronDown className="h-4 w-4 opacity-70" />
+            </button>
+          </div>
+        </div>
+
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_35px_rgba(229,57,53,0.35)] transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+          >
+            Book a call
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
+              <ArrowUpRight className="h-4 w-4" />
+            </span>
+          </Link>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden" role="dialog" aria-modal="true">
+          <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm" />
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+                <Image
+                  src="/logo.jpg"
+                  alt="WaitLa logo"
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto"
+                />
+              </Link>
+              <button
+                type="button"
+                className="-m-2.5 rounded-full p-2.5 text-gray-700 hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-200">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                <div className="py-6">
+                  <Link
+                    href="/contact"
+                    className="block rounded-full bg-gradient-to-r from-[#b12aff] via-[#9827f4] to-[#6d12d2] px-4 py-3 text-center text-sm font-semibold text-white shadow-md hover:scale-[1.01] transition"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Book a call
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
+

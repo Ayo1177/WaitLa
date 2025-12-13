@@ -1,0 +1,100 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
+
+const certifications = [
+  {
+    name: "Google Ads",
+    description: "Certified Google Ads partner",
+    logo: "/badges/google ads.png",
+  },
+  {
+    name: "Google Analytics",
+    description: "Certified Google Analytics partner",
+    logo: "/badges/google analytics.png",
+  },
+  {
+    name: "Meta Media Buying",
+    description: "Certified Facebook and Instagram advertising",
+    logo: "/badges/meta media buying.jpeg",
+  },
+];
+
+export default function Accreditations() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section ref={ref} className="py-24 sm:py-32 bg-gradient-to-r from-primary-dark via-primary to-accent-dark">
+      <div className="w-full px-6 lg:px-12 xl:px-16">
+        <div className="mx-auto max-w-4xl lg:text-center">
+          {isInView && (
+            <motion.h2
+              className="text-base font-semibold leading-7 text-primary"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Accreditations
+            </motion.h2>
+          )}
+          {isInView && (
+            <motion.p
+              className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              Certified Partners & Industry Leaders
+            </motion.p>
+          )}
+          {isInView && (
+            <motion.p
+              className="mt-6 text-lg leading-8 text-white/90"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              We're proud to be certified partners with industry-leading
+              platforms, ensuring we deliver cutting-edge solutions.
+            </motion.p>
+          )}
+        </div>
+        <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 max-w-5xl mx-auto">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.name}
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={
+                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+              }
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+            >
+              <div className="flex h-32 w-32 items-center justify-center rounded-lg bg-white p-4 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-shadow hover:scale-105">
+                <Image
+                  src={cert.logo}
+                  alt={cert.name}
+                  width={120}
+                  height={120}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <h3 className="mt-4 text-sm font-semibold text-white text-center">
+                {cert.name}
+              </h3>
+              <p className="mt-2 text-xs text-white/70 text-center">
+                {cert.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
