@@ -97,5 +97,3 @@ See [PHASE_PLAN.md](./PHASE_PLAN.md) for detailed implementation phases.
 - [PRD](./WaitLa_prd.md) - Product Requirements Document
 - [Phase Plan](./PHASE_PLAN.md) - Implementation phases
 - [Cursor Rules](./.cursorrules) - Development guidelines
-
-
