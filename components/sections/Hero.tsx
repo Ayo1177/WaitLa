@@ -1,25 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
-  
+  const t = useTranslations("Hero");
+
   // Fade out hero as user scrolls down - start at 100% opacity when at top
   // Fade starts when section bottom reaches viewport top, completes when section top reaches viewport top
   const { scrollYProgress: heroFadeProgress } = useScroll({
     target: sectionRef,
     offset: ["end end", "start end"],
   });
-  
+
   const heroOpacityValue = useTransform(heroFadeProgress, [0, 1], [1, 0]);
 
   useEffect(() => {
@@ -44,8 +42,8 @@ export default function Hero() {
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6 }}
             >
-              Take Your Brand to the{" "}
-              <span className="text-primary">Next Level</span>
+              {t("title.main")}{" "}
+              <span className="text-primary">{t("title.highlight")}</span>
             </motion.h1>
           )}
           {mounted && (
@@ -56,9 +54,7 @@ export default function Hero() {
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              Creative digital marketing agency specializing in web development,
-              mobile apps, digital strategy, and media buying. We bring
-              creativity, relevance, and performance to every project.
+              {t("subtitle")}
             </motion.p>
           )}
           {mounted && (
@@ -69,20 +65,12 @@ export default function Hero() {
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6, delay: 0.25 }}
             >
-              <Button
-                href="/contact"
-                size="lg"
-                className="group"
-              >
-                Book a Call
+              <Button href="/contact" size="lg" className="group">
+                {t("primaryCta")}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button
-                href="/portfolio"
-                variant="outline"
-                size="lg"
-              >
-                View Our Work
+              <Button href="/portfolio" variant="outline" size="lg">
+                {t("secondaryCta")}
               </Button>
             </motion.div>
           )}
@@ -96,17 +84,17 @@ export default function Hero() {
             >
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">50+</div>
-                <div className="text-xs">Projects</div>
+                <div className="text-xs">{t("stat.projects")}</div>
               </div>
               <div className="h-12 w-px bg-gray-300" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">30+</div>
-                <div className="text-xs">Happy Clients</div>
+                <div className="text-xs">{t("stat.clients")}</div>
               </div>
               <div className="h-12 w-px bg-gray-300" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">5★</div>
-                <div className="text-xs">Rating</div>
+                <div className="text-xs">{t("stat.rating")}</div>
               </div>
             </motion.div>
           )}
@@ -115,4 +103,3 @@ export default function Hero() {
     </section>
   );
 }
-

@@ -9,8 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { contactStripFormSchema, type ContactStripFormData } from "@/lib/validations";
 import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ContactStrip() {
+  const t = useTranslations("ContactStrip");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -65,11 +67,10 @@ export default function ContactStrip() {
         >
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to Take Your Brand to the Next Level?
+              {t("title")}
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/90">
-              Let's discuss how we can help you achieve your digital marketing
-              goals. Get in touch today for a free consultation.
+              {t("description")}
             </p>
           </div>
 
@@ -89,7 +90,7 @@ export default function ContactStrip() {
                   htmlFor="firstName"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  First Name <span className="text-red-300">*</span>
+                  {t("form.firstName")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -97,7 +98,7 @@ export default function ContactStrip() {
                     id="firstName"
                     {...register("firstName")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="John"
+                    placeholder={t("form.placeholder.firstName")}
                     aria-invalid={errors.firstName ? "true" : "false"}
                     aria-describedby={errors.firstName ? "firstName-error" : undefined}
                   />
@@ -114,7 +115,7 @@ export default function ContactStrip() {
                   htmlFor="lastName"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  Last Name <span className="text-red-300">*</span>
+                  {t("form.lastName")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -122,7 +123,7 @@ export default function ContactStrip() {
                     id="lastName"
                     {...register("lastName")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="Doe"
+                    placeholder={t("form.placeholder.lastName")}
                     aria-invalid={errors.lastName ? "true" : "false"}
                     aria-describedby={errors.lastName ? "lastName-error" : undefined}
                   />
@@ -141,7 +142,7 @@ export default function ContactStrip() {
                   htmlFor="companyName"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  Company Name <span className="text-red-300">*</span>
+                  {t("form.companyName")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -149,7 +150,7 @@ export default function ContactStrip() {
                     id="companyName"
                     {...register("companyName")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="Acme Inc."
+                    placeholder={t("form.placeholder.companyName")}
                     aria-invalid={errors.companyName ? "true" : "false"}
                     aria-describedby={errors.companyName ? "companyName-error" : undefined}
                   />
@@ -166,7 +167,7 @@ export default function ContactStrip() {
                   htmlFor="location"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  Location <span className="text-red-300">*</span>
+                  {t("form.location")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -174,7 +175,7 @@ export default function ContactStrip() {
                     id="location"
                     {...register("location")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="City, Country"
+                    placeholder={t("form.placeholder.location")}
                     aria-invalid={errors.location ? "true" : "false"}
                     aria-describedby={errors.location ? "location-error" : undefined}
                   />
@@ -193,7 +194,7 @@ export default function ContactStrip() {
                   htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  Email <span className="text-red-300">*</span>
+                  {t("form.email")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -201,7 +202,7 @@ export default function ContactStrip() {
                     id="email"
                     {...register("email")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="john@example.com"
+                    placeholder={t("form.placeholder.email")}
                     aria-invalid={errors.email ? "true" : "false"}
                     aria-describedby={errors.email ? "email-error" : undefined}
                   />
@@ -218,7 +219,7 @@ export default function ContactStrip() {
                   htmlFor="phone"
                   className="block text-sm font-semibold leading-6 text-white"
                 >
-                  Phone Number <span className="text-red-300">*</span>
+                  {t("form.phone")} <span className="text-red-300">{t("form.required")}</span>
                 </label>
                 <div className="mt-2">
                   <input
@@ -226,7 +227,7 @@ export default function ContactStrip() {
                     id="phone"
                     {...register("phone")}
                     className="block w-full rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-white/20 bg-white/95 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    placeholder="+212 625-625-625"
+                    placeholder={t("form.placeholder.phone")}
                     aria-invalid={errors.phone ? "true" : "false"}
                     aria-describedby={errors.phone ? "phone-error" : undefined}
                   />
@@ -246,7 +247,7 @@ export default function ContactStrip() {
                 aria-live="polite"
               >
                 <p className="text-sm font-medium text-green-100">
-                  Thank you! Your information has been submitted successfully. We'll get back to you soon.
+                  {t("form.success")}
                 </p>
               </div>
             )}
@@ -258,7 +259,7 @@ export default function ContactStrip() {
                 aria-live="polite"
               >
                 <p className="text-sm font-medium text-red-100">
-                  Something went wrong. Please try again or contact us directly.
+                  {t("form.error")}
                 </p>
               </div>
             )}
@@ -270,9 +271,9 @@ export default function ContactStrip() {
                 disabled={isSubmitting}
                 className="group w-full sm:w-auto mx-auto block shadow-[0_15px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)] transition-shadow duration-300"
               >
-                {isSubmitting ? "Submitting..." : (
+                {isSubmitting ? t("form.submitting") : (
                   <>
-                    Submit
+                    {t("form.submit")}
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 inline-block" />
                   </>
                 )}

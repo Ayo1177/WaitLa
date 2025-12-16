@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: "WaitLa - Digital Marketing Agency",
   description:
     "Creative digital marketing agency specializing in web development, mobile apps, digital strategy, and media buying.",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -16,12 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
   );
 }
+
+
 
 

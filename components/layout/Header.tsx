@@ -1,23 +1,41 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Dream Team", href: "/team" },
-  { name: "Our Services", href: "/services", hasDropdown: true },
-  { name: "Portfolio", href: "/portfolio" },
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "team", href: "/team" },
+  { key: "services", href: "/services", hasDropdown: true },
+  { key: "portfolio", href: "/portfolio" },
+];
+
+const servicesList = [
+  { key: "rpAndEvent", href: "/services/rp-et-evenement" },
+  { key: "agentIaAndCrm", href: "/services/agent-ia-et-crm" },
+  { key: "branding", href: "/services/branding" },
+  { key: "ugcAndStorytelling", href: "/services/ugc-et-storytelling" },
+  { key: "webDevelopment", href: "/services/creation-de-site-web" },
+  { key: "digitalAds", href: "/services/publicite-digitale-ads" },
+  { key: "socialMediaManagement", href: "/services/gestion-reseaux-sociaux" },
+  { key: "consultingAndTraining", href: "/services/consulting-formations" },
+  { key: "animation3d", href: "/services/animation-3d" },
+  { key: "design", href: "/services/design" },
+  { key: "printingAndBranding", href: "/services/impression-habillage" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+  const tNav = useTranslations("Nav");
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -60,26 +78,85 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-center">
           <div className="flex items-center gap-2 rounded-full border border-white/50 bg-white/10 px-3 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
+              <div
+                key={item.key}
+                className="relative"
+                onMouseEnter={() => item.hasDropdown && setServicesDropdownOpen(true)}
+                onMouseLeave={() => item.hasDropdown && setServicesDropdownOpen(false)}
+              >
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide transition",
+                    isActive(item.href)
+                      ? "bg-white text-primary-dark shadow-[0_10px_30px_rgba(255,255,255,0.25)]"
+                      : "text-white/90 hover:bg-white/15"
+                  )}
+                >
+                  {tNav(item.key as any)}
+                  {item.hasDropdown && (
+                    <ChevronDown className={cn(
+                      "h-4 w-4 opacity-70 transition-transform",
+                      servicesDropdownOpen && "rotate-180"
+                    )} />
+                  )}
+                </Link>
+                
+                {/* Services Dropdown Menu */}
+                {item.hasDropdown && servicesDropdownOpen && (
+                  <div 
+                    className="absolute left-1/2 top-full pt-2 -translate-x-1/2 w-[1100px] bg-transparent z-50"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+                      <div className="p-8">
+                        <div className="grid grid-cols-3 gap-8">
+                          {servicesList.map((service) => (
+                            <Link
+                              key={service.key}
+                              href={service.href}
+                              className="block px-5 py-4 rounded-lg text-gray-900 hover:bg-red-50 transition-colors group"
+                              onClick={() => setServicesDropdownOpen(false)}
+                            >
+                              <span className="text-base font-semibold group-hover:text-primary transition-colors">
+                                {tNav(`servicesDropdown.${service.key}` as any)}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 text-xs font-semibold uppercase tracking-wide">
+              <button
+                type="button"
+                onClick={() => router.replace(pathname, { locale: "fr" })}
                 className={cn(
-                  "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide transition",
-                  isActive(item.href)
-                    ? "bg-white text-primary-dark shadow-[0_10px_30px_rgba(255,255,255,0.25)]"
-                    : "text-white/90 hover:bg-white/15"
+                  "rounded-full px-3 py-1 transition",
+                  locale === "fr"
+                    ? "bg-white text-primary-dark"
+                    : "text-white/80 hover:bg-white/10"
                 )}
               >
-                {item.name}
-                {item.hasDropdown && (
-                  <ChevronDown className="h-4 w-4 opacity-70" />
+                FR
+              </button>
+              <button
+                type="button"
+                onClick={() => router.replace(pathname, { locale: "en" })}
+                className={cn(
+                  "rounded-full px-3 py-1 transition",
+                  locale === "en"
+                    ? "bg-white text-primary-dark"
+                    : "text-white/80 hover:bg-white/10"
                 )}
-              </Link>
-            ))}
-            <button className="flex items-center gap-2 rounded-full px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white/90 transition hover:bg-white/15">
-              <span className="text-lg leading-none">🇬🇧</span>
-              <ChevronDown className="h-4 w-4 opacity-70" />
-            </button>
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
 
@@ -88,7 +165,7 @@ export default function Header() {
             href="/contact"
             className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_35px_rgba(229,57,53,0.35)] transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
           >
-            Book a call
+            {tNav("contactCta")}
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
               <ArrowUpRight className="h-4 w-4" />
             </span>
@@ -124,14 +201,29 @@ export default function Header() {
               <div className="-my-6 divide-y divide-gray-200">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
+                    <div key={item.key}>
+                      <Link
+                        href={item.href}
+                        className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {tNav(item.key as any)}
+                      </Link>
+                      {item.hasDropdown && (
+                        <div className="mt-2 ml-4 space-y-1">
+                          {servicesList.map((service) => (
+                            <Link
+                              key={service.key}
+                              href={service.href}
+                              className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {tNav(`servicesDropdown.${service.key}` as any)}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
                 <div className="py-6">
@@ -140,7 +232,7 @@ export default function Header() {
                     className="block rounded-full bg-gradient-to-r from-[#b12aff] via-[#9827f4] to-[#6d12d2] px-4 py-3 text-center text-sm font-semibold text-white shadow-md hover:scale-[1.01] transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Book a call
+                    {tNav("contactCta")}
                   </Link>
                 </div>
               </div>

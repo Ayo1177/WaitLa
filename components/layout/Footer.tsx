@@ -1,25 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
-
-const navigation = {
-  services: [
-    { name: "Digital Strategy", href: "/services#digital-strategy" },
-    { name: "Brand Content", href: "/services#brand-content" },
-    { name: "Web Development", href: "/services#web-development" },
-    { name: "Media Buying", href: "/services#media-buying" },
-  ],
-  company: [
-    { name: "About", href: "/about" },
-    { name: "Team", href: "/team" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
-};
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
   {
@@ -35,6 +19,27 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  
+  const navigation = {
+    services: [
+      { nameKey: "services.digitalStrategy", href: "/services#digital-strategy" },
+      { nameKey: "services.brandContent", href: "/services#brand-content" },
+      { nameKey: "services.webDevelopment", href: "/services#web-development" },
+      { nameKey: "services.mediaBuying", href: "/services#media-buying" },
+    ],
+    company: [
+      { nameKey: "company.about", href: "/about" },
+      { nameKey: "company.team", href: "/team" },
+      { nameKey: "company.portfolio", href: "/portfolio" },
+      { nameKey: "company.contact", href: "/contact" },
+    ],
+    legal: [
+      { nameKey: "legal.privacy", href: "/privacy" },
+      { nameKey: "legal.terms", href: "/terms" },
+    ],
+  };
+
   return (
     <footer className="bg-gray-900 text-white opacity-100 relative -z-10" style={{ backgroundColor: '#111827' }} aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -52,8 +57,7 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
               <p className="mt-4 text-sm leading-6 text-gray-300">
-                Creative digital marketing agency specializing in web
-                development, mobile apps, digital strategy, and media buying.
+                {t("description")}
               </p>
             </div>
             <div className="flex space-x-6">
@@ -73,30 +77,30 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6">Services</h3>
+                <h3 className="text-sm font-semibold leading-6">{t("services.title")}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.services.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.nameKey}>
                       <Link
                         href={item.href}
                         className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
                       >
-                        {item.name}
+                        {t(item.nameKey)}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6">Company</h3>
+                <h3 className="text-sm font-semibold leading-6">{t("company.title")}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.nameKey}>
                       <Link
                         href={item.href}
                         className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
                       >
-                        {item.name}
+                        {t(item.nameKey)}
                       </Link>
                     </li>
                   ))}
@@ -105,7 +109,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6">Contact</h3>
+                <h3 className="text-sm font-semibold leading-6">{t("contact.title")}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
                     <a
@@ -134,15 +138,15 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6">Legal</h3>
+                <h3 className="text-sm font-semibold leading-6">{t("legal.title")}</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.nameKey}>
                       <Link
                         href={item.href}
                         className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
                       >
-                        {item.name}
+                        {t(item.nameKey)}
                       </Link>
                     </li>
                   ))}
@@ -153,7 +157,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
-            &copy; {new Date().getFullYear()} WaitLa. All rights reserved.
+            &copy; {new Date().getFullYear()} WaitLa. {t("copyright")}
           </p>
         </div>
       </div>
