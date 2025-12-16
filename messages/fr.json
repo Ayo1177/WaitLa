@@ -1,0 +1,279 @@
+{
+  "Nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "team": "Dream Team",
+    "services": "Nos services",
+    "portfolio": "Portfolio",
+    "contactCta": "Réserver un appel",
+    "servicesDropdown": {
+      "rpAndEvent": "RP et événement",
+      "agentIaAndCrm": "Agent IA et CRM",
+      "branding": "Branding",
+      "ugcAndStorytelling": "UGC et storytelling",
+      "webDevelopment": "Création de site web",
+      "digitalAds": "Publicité digitale & ads",
+      "socialMediaManagement": "Gestion des réseaux sociaux",
+      "consultingAndTraining": "Consulting et formations",
+      "animation3d": "Animation 3D",
+      "design": "Design",
+      "printingAndBranding": "Impression, habillage"
+    }
+  },
+  "Hero": {
+    "title": {
+      "main": "Faites passer votre marque au",
+      "highlight": "niveau supérieur"
+    },
+    "subtitle": "Agence de marketing digital créative, spécialisée dans le développement web, les applications mobiles, la stratégie digitale et l'achat média. Nous apportons créativité, pertinence et performance à chaque projet.",
+    "primaryCta": "Réserver un appel",
+    "secondaryCta": "Voir nos réalisations",
+    "stat": {
+      "projects": "Projets",
+      "clients": "Clients satisfaits",
+      "rating": "Note"
+    }
+  },
+  "AboutUs": {
+    "badge": "À propos de nous",
+    "title": "CE QUE NOUS FAISONS",
+    "description1": "WaitLa est une agence de marketing digital spécialisée dans le développement de sites web, la création d'applications mobiles et la conception de stratégies digitales.",
+    "description2": "Notre cœur de métier consiste à accompagner les entreprises et institutions dans la mise en œuvre d'une stratégie digitale adaptée aux nouveaux médias, afin de créer des solutions digitales innovantes.",
+    "kpi": {
+      "years": "Années d'expérience",
+      "projects": "Projets réussis",
+      "clients": "Clients satisfaits",
+      "reviews": "Avis 5 étoiles"
+    }
+  },
+  "AboutTeaser": {
+    "badge": "À propos de WaitLa",
+    "title": "Nous sommes une agence de marketing digital créative",
+    "description": "Spécialisée dans le développement de sites web, les applications mobiles, la stratégie digitale et l'achat média. Nous combinons créativité, jeunesse et innovation pour aider les marques à atteindre leur plein potentiel.",
+    "value": {
+      "creativity": "Créativité",
+      "creativityDesc": "Nous sortons des sentiers battus pour proposer des solutions innovantes qui se démarquent.",
+      "relevance": "Pertinence",
+      "relevanceDesc": "Chaque stratégie est adaptée à votre audience et à vos objectifs commerciaux.",
+      "performance": "Performance",
+      "performanceDesc": "Des approches basées sur les données qui offrent des résultats mesurables et un retour sur investissement."
+    },
+    "cta": "En savoir plus sur nous"
+  },
+  "Accreditations": {
+    "badge": "Accréditations",
+    "title": "Partenaires certifiés et leaders de l'industrie",
+    "description": "Nous sommes fiers d'être des partenaires certifiés avec les plateformes leaders de l'industrie, garantissant que nous offrons des solutions de pointe.",
+    "cert": {
+      "googleAds": "Google Ads",
+      "googleAdsDesc": "Partenaire certifié Google Ads",
+      "googleAnalytics": "Google Analytics",
+      "googleAnalyticsDesc": "Partenaire certifié Google Analytics",
+      "meta": "Achat média Meta",
+      "metaDesc": "Publicité certifiée Facebook et Instagram"
+    }
+  },
+  "ClientReferences": {
+    "badge": "Collaborations avec des marques",
+    "title": "NOS RÉFÉRENCES",
+    "description": "Nous avons eu le plaisir de collaborer avec une large gamme de marques, des startups technologiques aux entreprises renommées. Notre approche basée sur les données a contribué au succès dans divers secteurs. Nous avons apprécié le parcours et nous réjouissons de l'avenir."
+  },
+  "ContactStrip": {
+    "title": "Prêt à faire passer votre marque au niveau supérieur ?",
+    "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs de marketing digital. Contactez-nous dès aujourd'hui pour une consultation gratuite.",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "companyName": "Nom de l'entreprise",
+      "location": "Localisation",
+      "email": "Email",
+      "phone": "Numéro de téléphone",
+      "submit": "Soumettre",
+      "submitting": "Envoi en cours...",
+      "placeholder": {
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "companyName": "Entreprise Inc.",
+        "location": "Ville, Pays",
+        "email": "jean@exemple.com",
+        "phone": "+212 625-625-625"
+      },
+      "success": "Merci ! Vos informations ont été soumises avec succès. Nous vous contacterons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+      "required": "*"
+    }
+  },
+  "Footer": {
+    "description": "Agence de marketing digital créative spécialisée dans le développement web, les applications mobiles, la stratégie digitale et l'achat média.",
+    "services": {
+      "title": "Services",
+      "digitalStrategy": "Stratégie digitale",
+      "brandContent": "Contenu de marque",
+      "webDevelopment": "Développement web",
+      "mediaBuying": "Achat média"
+    },
+    "company": {
+      "title": "Entreprise",
+      "about": "À propos",
+      "team": "Équipe",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "title": "Légal",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    },
+    "copyright": "Tous droits réservés."
+  },
+  "PRAndEvents": {
+    "title": "RP et événement",
+    "subtitle": "Faites de votre événement un moment qui marque",
+    "description": "Chez Waitla, nous concevons et orchestrons des événements stratégiques qui renforcent votre image de marque, créent de l'engagement et génèrent de la visibilité durable. Nous allions relations publiques, créativité et production de contenu pour transformer chaque événement en véritable levier marketing.",
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "subtitle": "Organisation & coordination d'événements",
+      "items": {
+        "brandLaunches": "Lancements de marque & produits",
+        "corporateEvents": "Événements corporate",
+        "brandActivations": "Activations de marque",
+        "sportsCultural": "Événements sportifs & culturels"
+      }
+    },
+    "publicRelations": {
+      "title": "Relations publiques (RP)",
+      "items": {
+        "invitations": "Gestion des invitations & invités stratégiques",
+        "coordination": "Coordination avec médias, influenceurs et partenaires",
+        "communication": "Communication avant, pendant et après l'événement",
+        "brandImage": "Renforcement de l'image et de la notoriété de marque"
+      }
+    },
+    "production": {
+      "title": "Production & couverture événementielle",
+      "items": {
+        "videoPhoto": "Captation vidéo & photo professionnelle",
+        "aftermovies": "Aftermovies & contenus réseaux sociaux",
+        "storytelling": "Storytelling visuel en temps réel",
+        "optimizedContent": "Contenus optimisés pour Instagram, TikTok, LinkedIn"
+      }
+    },
+    "ourApproach": {
+      "title": "Notre approche",
+      "description": "Chez Waitla, un événement n'est jamais isolé. Il s'inscrit dans une stratégie globale :",
+      "before": {
+        "title": "Avant",
+        "items": "stratégie, storytelling, visibilité"
+      },
+      "during": {
+        "title": "Pendant",
+        "items": "expérience, engagement, contenu"
+      },
+      "after": {
+        "title": "Après",
+        "items": "diffusion, amplification, performance"
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": {
+        "hybridTeam": "Une équipe hybride : marketeurs, développeurs et filmmakers",
+        "internationalVision": "Vision stratégique internationale",
+        "creativeExecution": "Exécution créative et maîtrisée",
+        "lastingContent": "Contenus pensés pour durer après l'événement",
+        "resultsOriented": "Approche orientée image et résultats"
+      }
+    },
+    "forWhom": {
+      "title": "Pour qui ?",
+      "items": {
+        "brands": "Marques & entreprises",
+        "organizers": "Organisateurs d'événements",
+        "institutions": "Institutions & projets culturels",
+        "entrepreneurs": "Entrepreneurs & startups",
+        "nationalInternational": "Événements nationaux et internationaux"
+      }
+    },
+    "cta": {
+      "headline": "Passer à l'action",
+      "tagline": "Plus qu'un événement, une expérience de marque"
+    }
+  },
+  "AgentIAAndCRM": {
+      "title": "Agent IA et crm intégré",
+      "subtitle": "Automatisez, personnalisez et accélérez votre croissance",
+      "description": "Chez Waitla, nous concevons et intégrons des agents intelligents et des systèmes CRM sur mesure pour aider les marques à mieux gérer leurs prospects, automatiser leurs processus et améliorer leur performance commerciale.",
+      "tagline": "L'IA n'est pas un gadget. C'est un levier stratégique.",
+      "whatWeDo": {
+        "title": "Ce que nous faisons",
+        "aiAgents": {
+          "title": "Agents IA sur mesure",
+          "items": {
+            "conversational": "Agents conversationnels (site web, WhatsApp, Instagram, Messenger)",
+            "qualification": "Qualification automatique des leads",
+            "responses": "Réponses intelligentes 24/7",
+            "appointments": "Prise de rendez-vous automatisée",
+            "support": "Support client assisté par IA"
+          }
+        },
+        "crmIntegration": {
+          "title": "Intégration CRM",
+          "items": {
+            "setup": "Mise en place de CRM adaptés à votre activité",
+            "centralization": "Centralisation des contacts & prospects",
+            "tracking": "Suivi du parcours client",
+            "automation": "Automatisation des relances et des ventes",
+            "dashboard": "Tableaux de bord & reporting"
+          }
+        },
+        "marketingSales": {
+          "title": "Connexion marketing & ventes",
+          "items": {
+            "connection": "Liaison entre publicités, formulaires et CRM",
+            "tracking": "Tracking des leads et des performances",
+            "workflow": "Automatisation des workflows marketing",
+            "sync": "Synchronisation email, WhatsApp et réseaux sociaux"
+          }
+        }
+      },
+      "ourApproach": {
+        "title": "Notre approche",
+        "description": "Chez Waitla, la technologie sert la stratégie.",
+        "steps": {
+          "analyze": "Analyser vos besoins",
+          "design": "Concevoir des agents IA adaptés",
+          "integrate": "Intégrer un CRM efficace",
+          "optimize": "Optimiser en continu les performances"
+        },
+        "conclusion": "Chaque système est pensé pour être simple à utiliser, évolutif et orienté résultats."
+      },
+      "whyChoose": {
+        "title": "Pourquoi?",
+        "items": {
+          "expertise": "Expertise IA & automatisation",
+          "team": "Développeurs et marketeurs en interne",
+          "custom": "Solutions sur mesure, pas génériques",
+          "results": "Gain de temps et augmentation des conversions",
+          "vision": "Vision moderne de la relation client"
+        }
+      },
+      "forWhom": {
+        "title": "Pour qui?",
+        "items": {
+          "sme": "PME & grandes entreprises",
+          "ecommerce": "Marques e-commerce",
+          "services": "Services & agences",
+          "organizers": "Organisateurs d'événements",
+          "highVolume": "Projets à fort volume de leads"
+        }
+      },
+      "cta": {
+        "headline": "Envie d'automatiser votre relation client ?",
+        "subtitle": "Construisons votre système intelligent",
+        "tagline": "Automatisez aujourd'hui, performez demain"
+      }
+    }
+}

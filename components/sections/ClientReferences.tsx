@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const clients = [
   { name: "Client 1", industry: "Technology", testimonial: "Outstanding results!", logo: "/clients/client-1.png" },
@@ -17,6 +18,7 @@ const clients = [
 ];
 
 export default function ClientReferences() {
+  const t = useTranslations("ClientReferences");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -77,7 +79,7 @@ export default function ClientReferences() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Collaborations with brands
+              {t("badge")}
             </motion.button>
           )}
           {isInView && (
@@ -87,7 +89,7 @@ export default function ClientReferences() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              OUR REFERENCES
+              {t("title")}
             </motion.h2>
           )}
           {isInView && (
@@ -97,7 +99,7 @@ export default function ClientReferences() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              We've had the pleasure of partnering with a wide range of brands, from tech startups to renowned companies. Our data-driven approach has contributed to success across various industries. We've enjoyed the journey and look forward to the future.
+              {t("description")}
             </motion.p>
           )}
         </div>

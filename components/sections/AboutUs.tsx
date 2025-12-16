@@ -2,22 +2,16 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface KPI {
   value: number;
   prefix?: string;
   suffix?: string;
-  label: string;
+  labelKey: string;
 }
 
-const kpis: KPI[] = [
-  { value: 15, prefix: "+", suffix: "", label: "Years of Experience" },
-  { value: 200, prefix: "+", suffix: "", label: "Successful Projects" },
-  { value: 150, prefix: "+", suffix: "", label: "Happy Clients" },
-  { value: 160, prefix: "+", suffix: "", label: "5 Star Reviews" },
-];
-
-function CountUpNumber({ kpi, isInView }: { kpi: KPI; isInView: boolean }) {
+function CountUpNumber({ kpi, isInView, label }: { kpi: KPI; isInView: boolean; label: string }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -54,17 +48,25 @@ function CountUpNumber({ kpi, isInView }: { kpi: KPI; isInView: boolean }) {
         {kpi.suffix}
       </div>
       <div className="mt-2 text-sm font-medium text-white/90 sm:text-base">
-        {kpi.label}
+        {label}
       </div>
     </div>
   );
 }
 
 export default function AboutUs() {
+  const t = useTranslations("AboutUs");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const kpiRef = useRef(null);
   const kpisInView = useInView(kpiRef, { once: true, margin: "-100px" });
+
+  const kpis: KPI[] = [
+    { value: 15, prefix: "+", suffix: "", labelKey: "kpi.years" },
+    { value: 200, prefix: "+", suffix: "", labelKey: "kpi.projects" },
+    { value: 150, prefix: "+", suffix: "", labelKey: "kpi.clients" },
+    { value: 160, prefix: "+", suffix: "", labelKey: "kpi.reviews" },
+  ];
 
   // Track scroll relative to when section enters viewport
   const { scrollYProgress } = useScroll({
@@ -97,7 +99,7 @@ export default function AboutUs() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              About Us
+              {t("badge")}
             </motion.button>
             <motion.h2
               className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
@@ -105,7 +107,7 @@ export default function AboutUs() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              WHAT WE DO
+              {t("title")}
             </motion.h2>
           </motion.div>
 
@@ -122,9 +124,7 @@ export default function AboutUs() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              WaitLa is a Digital Marketing agency specializing in website
-              development, mobile application creation, and digital strategy
-              design.
+              {t("description1")}
             </motion.p>
             <motion.p
               className="text-lg leading-8 text-white sm:text-xl"
@@ -132,9 +132,7 @@ export default function AboutUs() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Our core business is supporting companies and institutions in
-              implementing a digital strategy adapted to new media, in order to
-              create innovative digital solutions.
+              {t("description2")}
             </motion.p>
           </motion.div>
         </div>
@@ -159,7 +157,7 @@ export default function AboutUs() {
               }}
             >
               <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
-                <CountUpNumber kpi={kpis[0]} isInView={kpisInView} />
+                <CountUpNumber kpi={kpis[0]} isInView={kpisInView} label={t(kpis[0].labelKey)} />
               </div>
             </motion.div>
 
@@ -180,7 +178,7 @@ export default function AboutUs() {
               }}
             >
               <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
-                <CountUpNumber kpi={kpis[1]} isInView={kpisInView} />
+                <CountUpNumber kpi={kpis[1]} isInView={kpisInView} label={t(kpis[1].labelKey)} />
               </div>
             </motion.div>
 
@@ -201,7 +199,7 @@ export default function AboutUs() {
               }}
             >
               <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
-                <CountUpNumber kpi={kpis[2]} isInView={kpisInView} />
+                <CountUpNumber kpi={kpis[2]} isInView={kpisInView} label={t(kpis[2].labelKey)} />
               </div>
             </motion.div>
 
@@ -222,7 +220,7 @@ export default function AboutUs() {
               }}
             >
               <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
-                <CountUpNumber kpi={kpis[3]} isInView={kpisInView} />
+                <CountUpNumber kpi={kpis[3]} isInView={kpisInView} label={t(kpis[3].labelKey)} />
               </div>
             </motion.div>
           </div>

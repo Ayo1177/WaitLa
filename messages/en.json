@@ -1,0 +1,279 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About Us",
+    "team": "Dream Team",
+    "services": "Our Services",
+    "portfolio": "Portfolio",
+    "contactCta": "Book a call",
+    "servicesDropdown": {
+      "rpAndEvent": "PR and Events",
+      "agentIaAndCrm": "AI Agent and CRM",
+      "branding": "Branding",
+      "ugcAndStorytelling": "UGC and Storytelling",
+      "webDevelopment": "Web Development",
+      "digitalAds": "Digital Advertising & Ads",
+      "socialMediaManagement": "Social Media Management",
+      "consultingAndTraining": "Consulting and Training",
+      "animation3d": "3D Animation",
+      "design": "Design",
+      "printingAndBranding": "Printing & Branding"
+    }
+  },
+  "Hero": {
+    "title": {
+      "main": "Take Your Brand to the",
+      "highlight": "Next Level"
+    },
+    "subtitle": "Creative digital marketing agency specializing in web development, mobile apps, digital strategy, and media buying. We bring creativity, relevance, and performance to every project.",
+    "primaryCta": "Book a call",
+    "secondaryCta": "View our work",
+    "stat": {
+      "projects": "Projects",
+      "clients": "Happy clients",
+      "rating": "Rating"
+    }
+  },
+  "AboutUs": {
+    "badge": "About Us",
+    "title": "WHAT WE DO",
+    "description1": "WaitLa is a Digital Marketing agency specializing in website development, mobile application creation, and digital strategy design.",
+    "description2": "Our core business is supporting companies and institutions in implementing a digital strategy adapted to new media, in order to create innovative digital solutions.",
+    "kpi": {
+      "years": "Years of Experience",
+      "projects": "Successful Projects",
+      "clients": "Happy Clients",
+      "reviews": "5 Star Reviews"
+    }
+  },
+  "AboutTeaser": {
+    "badge": "About WaitLa",
+    "title": "We're a creative digital marketing agency",
+    "description": "Specializing in website development, mobile applications, digital strategy, and media buying. We combine creativity, youth, and innovation to help brands reach their full potential.",
+    "value": {
+      "creativity": "Creativity",
+      "creativityDesc": "We think outside the box to deliver innovative solutions that stand out.",
+      "relevance": "Relevance",
+      "relevanceDesc": "Every strategy is tailored to your audience and business objectives.",
+      "performance": "Performance",
+      "performanceDesc": "Data-driven approaches that deliver measurable results and ROI."
+    },
+    "cta": "Learn More About Us"
+  },
+  "Accreditations": {
+    "badge": "Accreditations",
+    "title": "Certified Partners & Industry Leaders",
+    "description": "We're proud to be certified partners with industry-leading platforms, ensuring we deliver cutting-edge solutions.",
+    "cert": {
+      "googleAds": "Google Ads",
+      "googleAdsDesc": "Certified Google Ads partner",
+      "googleAnalytics": "Google Analytics",
+      "googleAnalyticsDesc": "Certified Google Analytics partner",
+      "meta": "Meta Media Buying",
+      "metaDesc": "Certified Facebook and Instagram advertising"
+    }
+  },
+  "ClientReferences": {
+    "badge": "Collaborations with brands",
+    "title": "OUR REFERENCES",
+    "description": "We've had the pleasure of partnering with a wide range of brands, from tech startups to renowned companies. Our data-driven approach has contributed to success across various industries. We've enjoyed the journey and look forward to the future."
+  },
+  "ContactStrip": {
+    "title": "Ready to Take Your Brand to the Next Level?",
+    "description": "Let's discuss how we can help you achieve your digital marketing goals. Get in touch today for a free consultation.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "companyName": "Company Name",
+      "location": "Location",
+      "email": "Email",
+      "phone": "Phone Number",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "placeholder": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "companyName": "Acme Inc.",
+        "location": "City, Country",
+        "email": "john@example.com",
+        "phone": "+212 625-625-625"
+      },
+      "success": "Thank you! Your information has been submitted successfully. We'll get back to you soon.",
+      "error": "Something went wrong. Please try again or contact us directly.",
+      "required": "*"
+    }
+  },
+  "Footer": {
+    "description": "Creative digital marketing agency specializing in web development, mobile apps, digital strategy, and media buying.",
+    "services": {
+      "title": "Services",
+      "digitalStrategy": "Digital Strategy",
+      "brandContent": "Brand Content",
+      "webDevelopment": "Web Development",
+      "mediaBuying": "Media Buying"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "team": "Team",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "All rights reserved."
+  },
+  "PRAndEvents": {
+    "title": "PR and Events",
+    "subtitle": "Make your event a moment that matters",
+    "description": "At Waitla, we design and orchestrate strategic events that strengthen your brand image, create engagement, and generate lasting visibility. We combine public relations, creativity, and content production to transform every event into a true marketing lever.",
+    "whatWeDo": {
+      "title": "What we do",
+      "subtitle": "Event organization & coordination",
+      "items": {
+        "brandLaunches": "Brand & product launches",
+        "corporateEvents": "Corporate events",
+        "brandActivations": "Brand activations",
+        "sportsCultural": "Sports & cultural events"
+      }
+    },
+    "publicRelations": {
+      "title": "Public Relations (PR)",
+      "items": {
+        "invitations": "Invitation & strategic guest management",
+        "coordination": "Coordination with media, influencers, and partners",
+        "communication": "Communication before, during, and after the event",
+        "brandImage": "Brand image and awareness strengthening"
+      }
+    },
+    "production": {
+      "title": "Production & event coverage",
+      "items": {
+        "videoPhoto": "Professional video & photo capture",
+        "aftermovies": "Aftermovies & social media content",
+        "storytelling": "Real-time visual storytelling",
+        "optimizedContent": "Content optimized for Instagram, TikTok, LinkedIn"
+      }
+    },
+    "ourApproach": {
+      "title": "Our approach",
+      "description": "At Waitla, an event is never isolated. It's part of a global strategy:",
+      "before": {
+        "title": "Before",
+        "items": "strategy, storytelling, visibility"
+      },
+      "during": {
+        "title": "During",
+        "items": "experience, engagement, content"
+      },
+      "after": {
+        "title": "After",
+        "items": "distribution, amplification, performance"
+      }
+    },
+    "whyChoose": {
+      "title": "Why choose Waitla?",
+      "items": {
+        "hybridTeam": "A hybrid team: marketers, developers, and filmmakers",
+        "internationalVision": "International strategic vision",
+        "creativeExecution": "Creative and mastered execution",
+        "lastingContent": "Content designed to last after the event",
+        "resultsOriented": "Image and results-oriented approach"
+      }
+    },
+    "forWhom": {
+      "title": "For whom?",
+      "items": {
+        "brands": "Brands & companies",
+        "organizers": "Event organizers",
+        "institutions": "Institutions & cultural projects",
+        "entrepreneurs": "Entrepreneurs & startups",
+        "nationalInternational": "National and international events"
+      }
+    },
+    "cta": {
+      "headline": "Take action",
+      "tagline": "More than an event, a brand experience"
+    }
+  },
+  "AgentIAAndCRM": {
+      "title": "AI Agent and integrated CRM",
+      "subtitle": "Automate, personalize and accelerate your growth",
+      "description": "At Waitla, we design and integrate intelligent agents and custom CRM systems to help brands better manage their prospects, automate their processes and improve their commercial performance.",
+      "tagline": "AI is not a gadget. It's a strategic lever.",
+      "whatWeDo": {
+        "title": "What we do",
+        "aiAgents": {
+          "title": "Custom AI Agents",
+          "items": {
+            "conversational": "Conversational agents (website, WhatsApp, Instagram, Messenger)",
+            "qualification": "Automatic lead qualification",
+            "responses": "Intelligent responses 24/7",
+            "appointments": "Automated appointment booking",
+            "support": "AI-assisted customer support"
+          }
+        },
+        "crmIntegration": {
+          "title": "CRM Integration",
+          "items": {
+            "setup": "Setting up CRM adapted to your business",
+            "centralization": "Centralization of contacts & prospects",
+            "tracking": "Customer journey tracking",
+            "automation": "Automation of follow-ups and sales",
+            "dashboard": "Dashboards & reporting"
+          }
+        },
+        "marketingSales": {
+          "title": "Marketing & Sales Connection",
+          "items": {
+            "connection": "Link between ads, forms and CRM",
+            "tracking": "Lead and performance tracking",
+            "workflow": "Marketing workflow automation",
+            "sync": "Email, WhatsApp and social media synchronization"
+          }
+        }
+      },
+      "ourApproach": {
+        "title": "Our approach",
+        "description": "At Waitla, technology serves strategy.",
+        "steps": {
+          "analyze": "Analyze your needs",
+          "design": "Design adapted AI agents",
+          "integrate": "Integrate an effective CRM",
+          "optimize": "Continuously optimize performance"
+        },
+        "conclusion": "Each system is designed to be simple to use, scalable and results-oriented."
+      },
+      "whyChoose": {
+        "title": "Why",
+        "items": {
+          "expertise": "AI & automation expertise",
+          "team": "In-house developers and marketers",
+          "custom": "Custom solutions, not generic",
+          "results": "Time savings and increased conversions",
+          "vision": "Modern vision of customer relations"
+        }
+      },
+      "forWhom": {
+        "title": "Who",
+        "items": {
+          "sme": "SMEs & large companies",
+          "ecommerce": "E-commerce brands",
+          "services": "Services & agencies",
+          "organizers": "Event organizers",
+          "highVolume": "High lead volume projects"
+        }
+      },
+      "cta": {
+        "headline": "Want to automate your customer relations?",
+        "subtitle": "Let's build your intelligent system",
+        "tagline": "Automate today, perform tomorrow"
+      }
+    }
+}

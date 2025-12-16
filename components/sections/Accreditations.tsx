@@ -4,26 +4,28 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const certifications = [
   {
-    name: "Google Ads",
-    description: "Certified Google Ads partner",
+    nameKey: "cert.googleAds",
+    descKey: "cert.googleAdsDesc",
     logo: "/badges/google ads.png",
   },
   {
-    name: "Google Analytics",
-    description: "Certified Google Analytics partner",
+    nameKey: "cert.googleAnalytics",
+    descKey: "cert.googleAnalyticsDesc",
     logo: "/badges/google analytics.png",
   },
   {
-    name: "Meta Media Buying",
-    description: "Certified Facebook and Instagram advertising",
+    nameKey: "cert.meta",
+    descKey: "cert.metaDesc",
     logo: "/badges/meta media buying.jpeg",
   },
 ];
 
 export default function Accreditations() {
+  const t = useTranslations("Accreditations");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -38,7 +40,7 @@ export default function Accreditations() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Accreditations
+              {t("badge")}
             </motion.h2>
           )}
           {isInView && (
@@ -48,7 +50,7 @@ export default function Accreditations() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Certified Partners & Industry Leaders
+              {t("title")}
             </motion.p>
           )}
           {isInView && (
@@ -58,8 +60,7 @@ export default function Accreditations() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              We're proud to be certified partners with industry-leading
-              platforms, ensuring we deliver cutting-edge solutions.
+              {t("description")}
             </motion.p>
           )}
         </div>
@@ -84,10 +85,10 @@ export default function Accreditations() {
                 />
               </div>
               <h3 className="mt-4 text-sm font-semibold text-white text-center">
-                {cert.name}
+                {t(cert.nameKey)}
               </h3>
               <p className="mt-2 text-xs text-white/70 text-center">
-                {cert.description}
+                {t(cert.descKey)}
               </p>
             </motion.div>
           ))}

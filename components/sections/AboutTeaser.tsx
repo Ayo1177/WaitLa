@@ -5,29 +5,28 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Button from "@/components/ui/Button";
 import { Sparkles, Target, TrendingUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const values = [
   {
-    name: "Creativity",
-    description:
-      "We think outside the box to deliver innovative solutions that stand out.",
+    nameKey: "value.creativity",
+    descKey: "value.creativityDesc",
     icon: Sparkles,
   },
   {
-    name: "Relevance",
-    description:
-      "Every strategy is tailored to your audience and business objectives.",
+    nameKey: "value.relevance",
+    descKey: "value.relevanceDesc",
     icon: Target,
   },
   {
-    name: "Performance",
-    description:
-      "Data-driven approaches that deliver measurable results and ROI.",
+    nameKey: "value.performance",
+    descKey: "value.performanceDesc",
     icon: TrendingUp,
   },
 ];
 
 export default function AboutTeaser() {
+  const t = useTranslations("AboutTeaser");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -42,7 +41,7 @@ export default function AboutTeaser() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              About WaitLa
+              {t("badge")}
             </motion.h2>
           )}
           {isInView && (
@@ -52,7 +51,7 @@ export default function AboutTeaser() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              We're a creative digital marketing agency
+              {t("title")}
             </motion.p>
           )}
           {isInView && (
@@ -62,9 +61,7 @@ export default function AboutTeaser() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Specializing in website development, mobile applications, digital
-              strategy, and media buying. We combine creativity, youth, and
-              innovation to help brands reach their full potential.
+              {t("description")}
             </motion.p>
           )}
         </div>
@@ -85,10 +82,10 @@ export default function AboutTeaser() {
                     className="h-5 w-5 flex-none text-white"
                     aria-hidden="true"
                   />
-                  {value.name}
+                  {t(value.nameKey)}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-white/90">
-                  <p className="flex-auto">{value.description}</p>
+                  <p className="flex-auto">{t(value.descKey)}</p>
                 </dd>
               </motion.div>
             ))}
@@ -102,7 +99,7 @@ export default function AboutTeaser() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <Button href="/about" variant="outline">
-                Learn More About Us
+                {t("cta")}
               </Button>
             </motion.div>
           )}
