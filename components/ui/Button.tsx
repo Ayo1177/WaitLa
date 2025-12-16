@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
@@ -14,7 +14,7 @@ export default function Button({
   variant = "primary",
   size = "md",
   className,
-  asLink = false,
+  asLink,
   href,
   children,
   ...props
@@ -39,7 +39,8 @@ export default function Button({
 
   const classes = cn(baseStyles, variants[variant], sizes[size], className);
 
-  if (asLink && href) {
+  // Automatically render as link if href is provided (unless explicitly disabled with asLink=false)
+  if (href && asLink !== false) {
     return (
       <Link href={href} className={classes}>
         {children}
