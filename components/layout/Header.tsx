@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,8 @@ const navigation = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
   { key: "team", href: "/team" },
-  { key: "services", href: "/services", hasDropdown: true },
+  // Main Services link points to the Services section on the homepage
+  { key: "services", href: "/#services", hasDropdown: true },
   { key: "portfolio", href: "/portfolio" },
 ];
 
@@ -36,6 +37,8 @@ export default function Header() {
   const router = useRouter();
   const locale = useLocale();
   const tNav = useTranslations("Nav");
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLAnchorElement>(null);
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -43,6 +46,59 @@ export default function Header() {
     }
     return pathname.startsWith(href);
   };
+
+  // Handle keyboard events for dropdown
+  const handleTriggerKeyDown = (e: React.KeyboardEvent, hasDropdown: boolean) => {
+    if (!hasDropdown) return;
+    
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setServicesDropdownOpen(true);
+    } else if (e.key === "Escape") {
+      setServicesDropdownOpen(false);
+      triggerRef.current?.focus();
+    }
+  };
+
+  // Handle focus events to open/close dropdown
+  useEffect(() => {
+    const handleFocusIn = (e: FocusEvent) => {
+      const target = e.target as Node;
+      if (
+        dropdownRef.current?.contains(target) ||
+        triggerRef.current?.contains(target)
+      ) {
+        // Focus is within dropdown or trigger, keep it open
+        setServicesDropdownOpen(true);
+      }
+    };
+
+    const handleFocusOut = (e: FocusEvent) => {
+      // Use setTimeout to check if focus moved outside after a brief delay
+      // This prevents flicker when moving between trigger and menu items
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(activeElement) &&
+          triggerRef.current &&
+          !triggerRef.current.contains(activeElement)
+        ) {
+          setServicesDropdownOpen(false);
+        }
+      }, 100);
+    };
+
+    if (servicesDropdownOpen) {
+      document.addEventListener("focusin", handleFocusIn);
+      document.addEventListener("focusout", handleFocusOut);
+    }
+
+    return () => {
+      document.removeEventListener("focusin", handleFocusIn);
+      document.removeEventListener("focusout", handleFocusOut);
+    };
+  }, [servicesDropdownOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] text-white shadow-lg">
@@ -88,8 +144,18 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
+                    tabIndex={0}
+                    aria-haspopup={item.hasDropdown ? "menu" : undefined}
+                    aria-expanded={item.hasDropdown ? servicesDropdownOpen : undefined}
+                    onKeyDown={(e) => handleTriggerKeyDown(e, !!item.hasDropdown)}
+                    onFocus={() => item.hasDropdown && setServicesDropdownOpen(true)}
+                    ref={(node) => {
+                      if (item.hasDropdown && node) {
+                        (triggerRef as React.MutableRefObject<HTMLAnchorElement | null>).current = node;
+                      }
+                    }}
                     className={cn(
-                      "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide whitespace-nowrap transition",
+                      "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide whitespace-nowrap transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary",
                       isActive(item.href)
                         ? "bg-white text-primary-dark shadow-[0_10px_30px_rgba(255,255,255,0.25)]"
                         : "text-white/90 hover:bg-white/15"
@@ -107,6 +173,8 @@ export default function Header() {
                   {/* Services Dropdown Menu */}
                   {item.hasDropdown && servicesDropdownOpen && (
                     <div 
+                      ref={dropdownRef}
+                      role="menu"
                       className="absolute left-1/2 top-full pt-2 -translate-x-1/2 w-[1100px] bg-transparent z-50"
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -120,13 +188,23 @@ export default function Header() {
                                 <Link
                                   key={service.key}
                                   href={service.href}
+                                  role="menuitem"
+                                  tabIndex={0}
                                   className={cn(
-                                    "block px-5 py-4 rounded-lg transition-colors group",
+                                    "block px-5 py-4 rounded-lg transition-colors group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
                                     serviceIsActive
                                       ? "bg-primary text-white font-bold"
                                       : "text-gray-900 hover:bg-red-50"
                                   )}
                                   onClick={() => setServicesDropdownOpen(false)}
+                                  onKeyDown={(e) => {
+                                    if (e.key === "Enter" || e.key === " ") {
+                                      setServicesDropdownOpen(false);
+                                    } else if (e.key === "Escape") {
+                                      setServicesDropdownOpen(false);
+                                      triggerRef.current?.focus();
+                                    }
+                                  }}
                                 >
                                   <span className={cn(
                                     "text-base transition-colors",

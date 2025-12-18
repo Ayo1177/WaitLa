@@ -69,7 +69,7 @@ export default function ClientReferences() {
   const handleMouseLeave = () => setIsScrolling(true);
 
   return (
-    <section ref={ref} className="py-24 sm:py-32 bg-gradient-to-r from-primary-dark via-primary to-accent-dark">
+    <section ref={ref} className="relative z-20 py-24 sm:py-32 -mt-1 bg-gradient-to-r from-primary-dark via-primary to-accent-dark">
       <div className="w-full px-6 lg:px-12 xl:px-16">
         <div className="mx-auto max-w-4xl lg:text-center">
           {isInView && (

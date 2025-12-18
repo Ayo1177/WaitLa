@@ -836,6 +836,7 @@
       "title": "What We Do",
       "strategy": {
         "title": "Social strategy",
+        "description": "We analyze your current presence and define a clear strategy aligned with your business objectives.",
         "items": [
           "Audit and analysis of your existing networks",
           "Editorial calendar development",
@@ -845,6 +846,7 @@
       },
       "content": {
         "title": "Content creation",
+        "description": "We create visual and video content optimized for each platform, combining storytelling and UGC.",
         "items": [
           "Visuals, videos and reels optimized for each platform",
           "Storytelling and UGC content for more authenticity",
@@ -854,6 +856,7 @@
       },
       "management": {
         "title": "Management & animation",
+        "description": "We publish, moderate and optimize your networks daily to maximize engagement.",
         "items": [
           "Daily or weekly publication according to plan",
           "Moderation and interaction with the community",

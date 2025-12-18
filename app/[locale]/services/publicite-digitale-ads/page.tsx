@@ -8,6 +8,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowRight, Sparkles, TrendingUp, BarChart3, Target, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import ServiceHero from "./hero";
 
 function DataStreamBackground() {
   return (

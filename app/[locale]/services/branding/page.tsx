@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import ServiceHero from "./hero";
 
 function BrandingBackground() {
   return (
@@ -105,58 +106,7 @@ export default function BrandingPage() {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-1 relative">
-        {/* Fixed background layer (static on scroll) */}
-        <div className="fixed inset-0 bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] z-0">
-          <BrandingBackground />
-        </div>
-
-        {/* 1) Hero */}
-        <section className="relative z-20 text-white min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
-          <div className="relative z-30 max-w-5xl mx-auto text-center w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold tracking-wide"
-            >
-              <Sparkles className="h-4 w-4" />
-              {t("title")}
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
-            >
-              {t("hero.headline")}
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              className="mt-6 text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed"
-            >
-              {t("hero.description")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.22 }}
-              className="mt-10"
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 rounded-full bg-white text-primary px-8 py-4 text-lg font-semibold shadow-lg hover:scale-[1.03] transition-all duration-300 group"
-              >
-                {t("hero.cta")}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
+        <ServiceHero variant="full" />
 
         {/* 2) What we do (uses the fixed background behind) */}
         <section

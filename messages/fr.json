@@ -836,6 +836,7 @@
       "title": "Ce que nous faisons",
       "strategy": {
         "title": "Stratégie sociale",
+        "description": "Nous analysons votre présence actuelle et définissons une stratégie claire alignée sur vos objectifs business.",
         "items": [
           "Audit et analyse de vos réseaux existants",
           "Élaboration de calendriers éditoriaux",
@@ -845,6 +846,7 @@
       },
       "content": {
         "title": "Création de contenu",
+        "description": "Nous créons du contenu visuel et vidéo optimisé pour chaque plateforme, en combinant storytelling et UGC.",
         "items": [
           "Visuels, vidéos et reels optimisés pour chaque plateforme",
           "Contenu storytelling et UGC pour plus d'authenticité",
@@ -854,6 +856,7 @@
       },
       "management": {
         "title": "Gestion & animation",
+        "description": "Nous publions, modérons et optimisons vos réseaux au quotidien pour maximiser l'engagement.",
         "items": [
           "Publication quotidienne ou hebdomadaire selon plan",
           "Modération et interaction avec la communauté",
