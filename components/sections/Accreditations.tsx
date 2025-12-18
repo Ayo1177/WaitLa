@@ -67,7 +67,7 @@ export default function Accreditations() {
         <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <motion.div
-              key={cert.name}
+              key={cert.nameKey}
               className="flex flex-col items-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
@@ -78,7 +78,7 @@ export default function Accreditations() {
               <div className="flex h-32 w-32 items-center justify-center rounded-lg bg-white p-4 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-shadow hover:scale-105">
                 <Image
                   src={cert.logo}
-                  alt={cert.name}
+                  alt={t(cert.nameKey)}
                   width={120}
                   height={120}
                   className="h-full w-full object-contain"

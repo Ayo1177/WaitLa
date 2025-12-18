@@ -69,7 +69,7 @@ export default function AboutTeaser() {
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3 max-w-6xl mx-auto">
             {values.map((value, index) => (
               <motion.div
-                key={value.name}
+                key={value.nameKey}
                 className="flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
                 animate={

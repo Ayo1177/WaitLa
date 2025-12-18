@@ -275,5 +275,1085 @@
         "subtitle": "Construisons votre système intelligent",
         "tagline": "Automatisez aujourd'hui, performez demain"
       }
+  },
+  "Branding": {
+    "title": "Branding",
+    "hero": {
+      "headline": "Construire des marques fortes, cohérentes et mémorables",
+      "description": "Chez Waitla, nous créons des marques qui ont du sens et de l’impact. Le branding ne se limite pas à un logo : c’est une stratégie globale qui définit votre identité, votre positionnement et la manière dont votre marque est perçue.",
+      "cta": "Donnons vie à votre identité"
+    },
+    "intro": {
+      "title": "Une identité qui vous ressemble",
+      "description": "Nous pensons le branding comme un système complet : une stratégie claire, une identité visuelle cohérente, une voix de marque reconnaissable et des déclinaisons qui assurent la continuité sur tous vos supports."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "stepLabel": "PILIER",
+      "cards": {
+        "strategy": {
+          "title": "Stratégie de marque",
+          "items": [
+            "Analyse du marché et de la concurrence",
+            "Définition du positionnement",
+            "Plateforme de marque (vision, mission, valeurs)",
+            "Ton de communication & message clé"
+          ]
+        },
+        "visual": {
+          "title": "Identité visuelle",
+          "items": [
+            "Création de logo",
+            "Charte graphique",
+            "Typographies & couleurs",
+            "Direction artistique cohérente"
+          ]
+        },
+        "verbal": {
+          "title": "Branding verbal",
+          "items": [
+            "Naming & slogans",
+            "Storytelling de marque",
+            "Messages marketing & brand voice",
+            "Cohérence sur tous les supports"
+          ]
+        },
+        "rollout": {
+          "title": "Déclinaison & cohérence",
+          "items": [
+            "Supports digitaux & print",
+            "Réseaux sociaux",
+            "Site web & landing pages",
+            "Présentations & supports commerciaux"
+          ]
+        }
+      }
+    },
+    "ourApproach": {
+      "title": "Notre approche",
+      "description": "Chez Waitla, chaque marque est pensée pour durer et évoluer.",
+      "steps": {
+        "understand": "Comprendre votre ADN",
+        "structure": "Structurer votre image",
+        "create": "Créer une identité forte",
+        "activate": "Activer la marque sur tous les points de contact"
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Vision stratégique avant le design",
+        "Créativité alignée aux objectifs business",
+        "Équipe internationale & pluridisciplinaire",
+        "Marques pensées pour le digital et la performance",
+        "Cohérence et crédibilité à long terme"
+      ]
+    },
+    "forWhom": {
+      "title": "Pour qui ?",
+      "items": [
+        "Startups & entrepreneurs",
+        "Marques en création ou repositionnement",
+        "PME & grandes entreprises",
+        "Projets événementiels & culturels"
+      ]
+    },
+    "cta": {
+      "headline": "Envie de construire une marque forte ?",
+      "subtitle": "Donnons vie à votre identité",
+      "button": "Donnons vie à votre identité",
+      "tagline": "Votre marque, votre signature"
     }
+  },
+  "UGCAndStorytelling": {
+    "title": "UGC & storytelling",
+    "hero": {
+      "headline": "Transformez vos clients en ambassadeurs, racontez votre histoire",
+      "description": "Chez Waitla, nous croyons que chaque marque a une histoire unique et que vos clients peuvent devenir vos meilleurs porte-paroles. Grâce au storytelling et à l’UGC, nous créons des contenus authentiques qui génèrent engagement, confiance et visibilité.",
+      "controls": {
+        "pause": "Mettre en pause",
+        "play": "Lire la vidéo"
+      }
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "stream": {
+        "title": "Live UGC stream",
+        "subtitle": "Aperçu — exemples de contenus et formats",
+        "hint": "Survolez / cliquez une carte pour filtrer le flux."
+      },
+      "filters": {
+        "all": "Tout",
+        "ugc": "UGC",
+        "story": "Storytelling",
+        "integration": "Intégration"
+      },
+      "cards": {
+        "ugc": {
+          "title": "User Generated Content (UGC)",
+          "items": [
+            "Collecte et valorisation de contenus créés par vos clients",
+            "Création de campagnes participatives sur réseaux sociaux",
+            "Modération et curation des contenus authentiques",
+            "Amplification de la portée grâce aux ambassadeurs de marque"
+          ]
+        },
+        "storytelling": {
+          "title": "Storytelling & contenu de marque",
+          "items": [
+            "Narration stratégique pour raconter l’histoire de votre marque",
+            "Création de contenus vidéo, photo et texte impactants",
+            "Campagnes sociales, site web et publicité",
+            "Positionnement émotionnel et mémorable"
+          ]
+        },
+        "integration": {
+          "title": "Intégration marketing",
+          "items": [
+            "Combinaison UGC + storytelling + stratégie sociale",
+            "Optimisation pour engagement et conversion",
+            "Mesure de l’impact et ROI des contenus",
+            "Amplification via influenceurs et communautés"
+          ]
+        }
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "description": "Chez Waitla, chaque contenu est pensé pour :",
+      "steps": {
+        "capture": {
+          "title": "Captiver votre audience",
+          "description": "Accroches, formats natifs et storytelling court pour stopper le scroll."
+        },
+        "involve": {
+          "title": "Impliquer vos clients",
+          "description": "Activation, participation, preuves sociales et contenus authentiques."
+        },
+        "reinforce": {
+          "title": "Renforcer votre image de marque",
+          "description": "Cohérence, émotion, répétition et diffusion là où vos clients écoutent."
+        }
+      },
+      "conclusion": "Du contenu authentique au storytelling stratégique, nous faisons parler votre marque là où vos clients écoutent."
+    },
+    "proof": {
+      "whyTitle": "Pourquoi choisir Waitla ?",
+      "whyItems": [
+        "Expertise marketing + créative + digitale",
+        "Transformation des clients en ambassadeurs",
+        "Contenus authentiques et émotionnels",
+        "Stratégie mesurable et orientée résultats",
+        "Expérience internationale de notre équipe"
+      ],
+      "whoTitle": "Pour qui ?",
+      "whoItems": [
+        "Marques de consommation (mode, food, tech…)",
+        "Startups & e-commerce",
+        "Agences & projets événementiels",
+        "Toute marque souhaitant renforcer sa communauté"
+      ],
+      "highlights": {
+        "title": "Résultats & signaux de confiance",
+        "items": [
+          "+150% engagement",
+          "+2,3x taux de conversion",
+          "UGC & ads : CPA optimisé",
+          "Communauté plus active"
+        ]
+      }
+    },
+    "cta": {
+      "headline": "Vous voulez que vos clients racontent votre histoire ?",
+      "subtitle": "Créons ensemble vos campagnes UGC & storytelling",
+      "builderTitle": "Campaign builder",
+      "choices": {
+        "ugc": "Je veux plus de UGC",
+        "story": "Je veux un meilleur storytelling",
+        "both": "Je veux les deux"
+      },
+      "paths": {
+        "ugc": "Collecter → Curater → Amplifier",
+        "story": "Écrire → Produire → Diffuser",
+        "both": "UGC → Story → Performance"
+      },
+      "dynamicTaglines": {
+        "ugc": "Plus d’UGC, plus de preuves sociales.",
+        "story": "Des histoires qui marquent et fidélisent.",
+        "both": "Vos clients, vos meilleurs storytellers."
+      },
+      "button": "Donnons vie à votre campagne"
+    },
+    "modal": {
+      "close": "Fermer",
+      "seeMore": "Voir plus"
+    }
+  },
+  "WebProfessionalWebsite": {
+    "hero": {
+      "badge": "Création de Site Web Professionnel",
+      "headline": "Votre présence digitale sur mesure",
+      "description": "Chez Waitla, nous ne créons pas seulement des sites web, nous construisons des plateformes performantes, capables de convertir vos visiteurs en clients et de renforcer votre image de marque.",
+      "metricLabel": "Page load :"
+    },
+    "intro": {
+      "title": "Un site qui performe, pas juste une vitrine",
+      "description": "Nous concevons des sites rapides, beaux et orientés conversion. Chaque composant est pensé pour l’expérience utilisateur, le SEO et la performance.",
+      "demo": {
+        "title": "Démo interactive",
+        "caption": "Un aperçu de la structure et de la hiérarchie — desktop & mobile.",
+        "modes": {
+          "desktop": "Desktop",
+          "mobile": "Mobile"
+        }
+      }
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "hintHover": "Survolez pour voir les specs techniques.",
+      "hintTap": "Touchez pour voir les specs techniques.",
+      "specTitle": "Specs techniques",
+      "specCaption": "Un aperçu de notre stack et des optimisations que nous appliquons.",
+      "cards": {
+        "custom": {
+          "label": "🌐",
+          "title": "Sites web sur mesure",
+          "specHeadline": "Stack & intégrations",
+          "items": [
+            "Sites vitrines élégants et professionnels",
+            "Sites e-commerce optimisés pour la conversion",
+            "Landing pages pour campagnes marketing",
+            "Responsive design (mobile, tablette, desktop)"
+          ]
+        },
+        "performance": {
+          "label": "⚡",
+          "title": "Performance & expérience utilisateur",
+          "specHeadline": "Performance & SEO",
+          "items": [
+            "Navigation intuitive et rapide",
+            "Optimisation SEO pour être visible sur Google",
+            "Intégration des outils marketing (CRM, IA, newsletter)",
+            "Sécurité et maintenance continue"
+          ]
+        },
+        "design": {
+          "label": "🎨",
+          "title": "Design & branding",
+          "specHeadline": "UI/UX & identité",
+          "items": [
+            "Identité visuelle intégrée",
+            "Contenu visuel et textuel aligné à votre stratégie",
+            "Expérience immersive pour vos visiteurs",
+            "Storytelling et UGC intégrés pour plus d’engagement"
+          ]
+        }
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "description": "Chez Waitla, un site web n’est pas juste une vitrine. Il doit être un outil stratégique.",
+      "openCase": "Voir un exemple (snippet)",
+      "phases": {
+        "before": {
+          "label": "Avant",
+          "title": "Comprendre",
+          "items": [
+            "Objectifs business & KPI",
+            "Ciblage & parcours utilisateur",
+            "Architecture & contenu"
+          ],
+          "caseStudy": "Exemple : audit + arborescence optimisée → +18% de temps passé et une navigation plus fluide."
+        },
+        "during": {
+          "label": "Pendant",
+          "title": "Construire",
+          "items": [
+            "Design UI/UX",
+            "Développement & intégrations",
+            "Tracking & SEO technique"
+          ],
+          "caseStudy": "Exemple : optimisation performance → temps de chargement réduit de 30% pendant la phase build."
+        },
+        "after": {
+          "label": "Après",
+          "title": "Optimiser",
+          "items": [
+            "Suivi & maintenance",
+            "Tests & itérations",
+            "Conversion continue"
+          ],
+          "caseStudy": "Exemple : A/B testing + ajustements UX → +25% de conversion sur la page clé."
+        }
+      }
+    },
+    "proof": {
+      "whyTitle": "Pourquoi choisir Waitla ?",
+      "whyItems": [
+        "Design et développement premium",
+        "Expérience utilisateur pensée pour convertir",
+        "Intégration complète marketing + IA + CRM",
+        "Équipe expérimentée internationalement",
+        "Sites rapides, sécurisés et optimisés SEO"
+      ],
+      "whoTitle": "Pour qui ?",
+      "whoItems": [
+        "Marques et startups",
+        "Entreprises B2B et B2C",
+        "Projets e-commerce",
+        "Événements et campagnes promotionnelles"
+      ]
+    },
+    "dashboard": {
+      "kicker": "Site performance",
+      "title": "Aperçu des résultats",
+      "subtitle": "Dashboard (simulation) — ce que nous visons sur vos projets.",
+      "metrics": {
+        "seo": "Score SEO",
+        "load": "Temps de chargement",
+        "conversion": "Taux de conversion",
+        "accessibility": "Accessibilité"
+      },
+      "noteTitle": "Pourquoi c’est important ?",
+      "note": "Un site rapide et clair améliore le SEO, l’expérience utilisateur et la conversion."
+    },
+    "calculator": {
+      "kicker": "Brief projet",
+      "title": "Parlez‑nous de vos besoins",
+      "fields": {
+        "type": "Type de site",
+        "industry": "Secteur",
+        "industryPlaceholder": "Ex. e-commerce, immobilier, restaurant…",
+        "priority": "Priorité"
+      },
+      "types": {
+        "vitrine": "Site vitrine",
+        "ecommerce": "E-commerce",
+        "landing": "Landing page"
+      },
+      "priorities": {
+        "design": "Design",
+        "seo": "SEO",
+        "speed": "Vitesse"
+      },
+      "output": {
+        "title": "Récapitulatif",
+        "siteType": "Type",
+        "industry": "Secteur",
+        "priority": "Priorité",
+        "industryPlaceholder": "Non renseigné",
+        "next": "Ces infos nous servent à préparer l’appel et cadrer le projet."
+      }
+    },
+    "cta": {
+      "headline": "Vous voulez un site web qui transforme vos visiteurs en clients ?",
+      "subtitle": "Discutons de votre projet.",
+      "tagline": "Votre site web, votre levier de croissance"
+    },
+    "modal": {
+      "close": "Fermer"
+    }
+  }
+  ,
+  "DigitalAds": {
+    "hero": {
+      "badge": "Publicité Digitale & Ads",
+      "headline": "Faites parler votre marque là où ça compte",
+      "description": "Chez Waitla, nous ne faisons pas que lancer des publicités. Nous créons des campagnes digitales stratégiques, pensées pour attirer, engager et convertir votre audience sur tous les canaux numériques."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "platformSelector": {
+        "title": "Sélectionnez une plateforme",
+        "selected": "Plateforme sélectionnée"
+      },
+      "cards": {
+        "paid": {
+          "label": "📊",
+          "title": "Publicité payante (Paid Ads)",
+          "items": [
+            "Facebook Ads & Instagram Ads",
+            "Google Ads & YouTube Ads",
+            "LinkedIn Ads & Twitter Ads",
+            "TikTok Ads et réseaux émergents"
+          ]
+        },
+        "content": {
+          "label": "🎨",
+          "title": "Création de contenu publicitaire",
+          "items": [
+            "Visuels et vidéos optimisés pour chaque plateforme",
+            "Storytelling publicitaire engageant",
+            "UGC et contenus créatifs pour augmenter l'authenticité",
+            "Tests A/B pour maximiser les performances"
+          ]
+        },
+        "optimization": {
+          "label": "🔗",
+          "title": "Optimisation & suivi",
+          "items": [
+            "Suivi des conversions et ROI en temps réel",
+            "Ciblage précis selon audience et objectifs",
+            "Optimisation quotidienne des campagnes",
+            "Intégration avec CRM et agents IA pour automatisation"
+          ]
+        }
+      },
+      "platforms": {
+        "facebook": {
+          "name": "Facebook",
+          "highlights": [
+            "Publicités ciblées par audience",
+            "Carrousels et vidéos publicitaires",
+            "Retargeting avancé",
+            "Optimisation pour conversions"
+          ]
+        },
+        "instagram": {
+          "name": "Instagram",
+          "highlights": [
+            "Stories et Reels publicitaires",
+            "Publicités natives dans le feed",
+            "Influenceurs et UGC",
+            "Engagement visuel et créatif"
+          ]
+        },
+        "google": {
+          "name": "Google",
+          "highlights": [
+            "Recherche payante (SEM)",
+            "Google Ads Search",
+            "Shopping Ads",
+            "Optimisation pour qualité et ROI"
+          ]
+        },
+        "youtube": {
+          "name": "YouTube",
+          "highlights": [
+            "Publicités vidéo YouTube",
+            "TrueView et skippable ads",
+            "Bumper ads et display",
+            "Ciblage par intérêts et audiences"
+          ]
+        },
+        "tiktok": {
+          "name": "TikTok",
+          "highlights": [
+            "Création de contenus viraux",
+            "UGC et influenceurs",
+            "Publicités natives",
+            "Engagement jeune audience"
+          ]
+        },
+        "linkedin": {
+          "name": "LinkedIn",
+          "highlights": [
+            "B2B et professionnels",
+            "Lead generation",
+            "Content marketing",
+            "Thought leadership"
+          ]
+        }
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "description": "Chez Waitla, chaque campagne est pensée pour transformer les clics en résultats concrets :",
+      "steps": {
+        "analyze": {
+          "title": "Analyser",
+          "description": "Votre marché et votre audience"
+        },
+        "create": {
+          "title": "Créer",
+          "description": "Des messages impactants"
+        },
+        "launch": {
+          "title": "Lancer",
+          "description": "Des campagnes ciblées"
+        },
+        "optimize": {
+          "title": "Optimiser",
+          "description": "Constamment pour un ROI maximal"
+        }
+      }
+    },
+    "proof": {
+      "whyTitle": "Pourquoi choisir Waitla ?",
+      "whyItems": [
+        "Expertise marketing & technique combinée",
+        "Créativité + performance = campagnes qui convertissent",
+        "Approche data-driven et orientée ROI",
+        "Expérience internationale et multi-secteurs",
+        "Contenu publicitaire optimisé pour chaque plateforme"
+      ],
+      "whoTitle": "Pour qui ?",
+      "whoItems": [
+        "Marques B2C et B2B",
+        "E-commerce et startups",
+        "Événements et lancements de produits",
+        "Entreprises cherchant à générer du trafic qualifié"
+      ],
+      "campaignWall": {
+        "title": "Campagnes réussies",
+        "caption": "Aperçu de créatifs publicitaires avec métriques de performance réelles."
+      }
+    },
+    "cta": {
+      "headline": "Vous voulez des campagnes digitales qui rapportent ?",
+      "subtitle": "Parlons de votre stratégie Ads",
+      "tagline": "Des publicités qui convertissent vraiment"
+    },
+    "projectBrief": {
+      "kicker": "Brief projet",
+      "title": "Parlez-nous de vos besoins",
+      "fields": {
+        "spend": "Budget mensuel actuel",
+        "spendPlaceholder": "Ex. 5000",
+        "industry": "Secteur",
+        "industryPlaceholder": "Ex. e-commerce, tech, retail…",
+        "goal": "Objectif principal"
+      },
+      "goals": {
+        "awareness": "Notoriété",
+        "leads": "Leads",
+        "sales": "Ventes"
+      },
+      "result": {
+        "title": "Potentiel d'augmentation",
+        "subtitle": "Revenus mensuels estimés avec optimisation"
+      },
+      "button": "Parlons stratégie"
+    }
+  },
+  "SocialMediaManagement": {
+    "hero": {
+      "badge": "Gestion des Réseaux Sociaux",
+      "title": "Transformez vos plateformes en leviers de croissance",
+      "subtitle": "Chez Waitla, nous ne nous contentons pas de publier du contenu. Nous créons une stratégie sociale complète, engageante et cohérente, qui renforce votre image de marque et génère de l'interaction réelle avec votre audience."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "strategy": {
+        "title": "Stratégie sociale",
+        "items": [
+          "Audit et analyse de vos réseaux existants",
+          "Élaboration de calendriers éditoriaux",
+          "Définition des messages clés et du ton de la marque",
+          "Définition des KPIs et objectifs"
+        ]
+      },
+      "content": {
+        "title": "Création de contenu",
+        "items": [
+          "Visuels, vidéos et reels optimisés pour chaque plateforme",
+          "Contenu storytelling et UGC pour plus d'authenticité",
+          "Campagnes sociales créatives et engageantes",
+          "Adaptation aux tendances et nouveautés (TikTok, Reels, Shorts)"
+        ]
+      },
+      "management": {
+        "title": "Gestion & animation",
+        "items": [
+          "Publication quotidienne ou hebdomadaire selon plan",
+          "Modération et interaction avec la communauté",
+          "Suivi des performances et reporting détaillé",
+          "Optimisation continue pour engagement et conversion"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "subtitle": "Chez Waitla, chaque réseau social est un outil stratégique, pas juste un canal de communication :",
+      "steps": [
+        {
+          "title": "Planifier",
+          "description": "stratégie claire et objectifs définis"
+        },
+        {
+          "title": "Créer",
+          "description": "contenu engageant et authentique"
+        },
+        {
+          "title": "Publier",
+          "description": "au bon moment, pour la bonne audience"
+        },
+        {
+          "title": "Analyser",
+          "description": "mesurer et améliorer les résultats"
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Expertise créative + stratégique",
+        "Contenu authentique et orienté résultat",
+        "Gestion multi-plateformes (Instagram, Facebook, TikTok, LinkedIn…)",
+        "Analyse de données et optimisation continue",
+        "Expérience internationale de l'équipe"
+      ]
+    },
+    "who": {
+      "title": "Pour qui ?",
+      "items": [
+        "Marques B2C et B2B",
+        "Startups et e-commerce",
+        "Institutions et événements",
+        "Toute entreprise souhaitant développer sa communauté et sa notoriété"
+      ]
+    },
+    "cta": {
+      "kicker": "Appel à l'action",
+      "title": "Vous voulez que vos réseaux sociaux travaillent pour vous ?",
+      "subtitle": "Construisons votre stratégie ensemble",
+      "button": "Réserver un appel",
+      "tagline": "Des réseaux sociaux qui convertissent",
+      "quiz": {
+        "title": "Stratégie Builder",
+        "step1": {
+          "question": "Quelle est votre plateforme principale ?",
+          "platforms": ["Instagram", "Facebook", "TikTok", "LinkedIn", "Twitter", "YouTube"]
+        },
+        "step2": {
+          "question": "Quel est votre objectif principal ?",
+          "goals": ["Notoriété", "Engagement", "Ventes"]
+        },
+        "step3": {
+          "question": "Fréquence de publication souhaitée ?",
+          "frequencies": ["Quotidienne", "3-5x/semaine", "Hebdomadaire"]
+        },
+        "result": {
+          "title": "Votre stratégie personnalisée",
+          "description": "Basée sur vos réponses, nous recommandons une stratégie sur {platform} axée sur {goal} avec publication {frequency}.",
+          "reset": "Recommencer"
+        }
+      }
+    }
+  },
+  "ConsultingAndTraining": {
+    "hero": {
+      "badge": "Consulting & Formations",
+      "title": "Développez vos compétences, transformez votre business",
+      "subtitle": "Chez Waitla, nous ne nous contentons pas de conseiller. Nous formons, nous accompagnons et nous transformons vos équipes et votre stratégie pour des résultats durables et mesurables."
+    },
+    "pathway": {
+      "title": "Choisissez votre parcours",
+      "subtitle": "Que vous souhaitiez développer votre stratégie business ou renforcer les compétences de votre équipe, nous avons la solution adaptée.",
+      "business": {
+        "title": "Pour votre business",
+        "subtitle": "Stratégie & Consulting",
+        "description": "Audit stratégique, définition d'objectifs, roadmap de croissance et accompagnement personnalisé pour transformer votre vision en résultats concrets."
+      },
+      "team": {
+        "title": "Pour votre équipe",
+        "subtitle": "Formations & Upskilling",
+        "description": "Formations pratiques, workshops interactifs et programmes de montée en compétences pour équiper votre équipe des outils et méthodes les plus efficaces."
+      }
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "consulting": {
+        "title": "Consulting stratégique",
+        "items": [
+          "Audit de votre stratégie digitale et marketing",
+          "Définition d'objectifs et KPIs alignés sur vos enjeux business",
+          "Roadmap stratégique et plan d'action personnalisé",
+          "Accompagnement dans la mise en œuvre et l'optimisation"
+        ]
+      },
+      "training": {
+        "title": "Formations & workshops",
+        "items": [
+          "Formations sur-mesure adaptées à vos besoins",
+          "Workshops pratiques et interactifs",
+          "Programmes de montée en compétences (digital marketing, publicité, réseaux sociaux)",
+          "Certifications et suivi post-formation"
+        ]
+      },
+      "support": {
+        "title": "Accompagnement continu",
+        "items": [
+          "Coaching individuel et collectif",
+          "Points de suivi réguliers et ajustements",
+          "Ressources et outils pratiques",
+          "Communauté d'apprentissage et échanges"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "subtitle": "Un cycle d'empowerment continu pour garantir votre succès :",
+      "steps": [
+        {
+          "title": "Comprendre",
+          "description": "Analyse approfondie de vos besoins, de vos enjeux et de votre contexte"
+        },
+        {
+          "title": "Former",
+          "description": "Transmission de connaissances pratiques et applicables immédiatement"
+        },
+        {
+          "title": "Accompagner",
+          "description": "Suivi personnalisé pour garantir l'application et l'amélioration continue"
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Expertise terrain + pédagogie = résultats concrets",
+        "Approche personnalisée adaptée à votre contexte",
+        "Formateurs et consultants expérimentés internationalement",
+        "Focus sur l'application pratique et les résultats mesurables",
+        "Accompagnement à long terme pour garantir la pérennité"
+      ]
+    },
+    "who": {
+      "title": "Pour qui ?",
+      "items": [
+        "Dirigeants et entrepreneurs",
+        "Équipes marketing et communication",
+        "Startups en phase de croissance",
+        "Entreprises souhaitant digitaliser leurs compétences"
+      ]
+    },
+    "cta": {
+      "kicker": "Appel à l'action",
+      "title": "Prêt à développer vos compétences ?",
+      "subtitle": "Commençons par évaluer vos besoins",
+      "button": "Réserver un appel",
+      "tagline": "Votre croissance, notre expertise"
+    },
+    "assessment": {
+      "title": "Évaluation rapide de vos compétences",
+      "question1": "Quel est votre niveau actuel en marketing digital ?",
+      "levels": ["Débutant", "Intermédiaire", "Avancé"],
+      "question2": "Quel est votre plus grand défi actuel ?",
+      "challenges": [
+        "Définir une stratégie claire",
+        "Former mon équipe",
+        "Optimiser nos performances",
+        "Comprendre les outils digitaux"
+      ],
+      "result": {
+        "title": "Recommandation personnalisée",
+        "description": "Basé sur vos réponses, nous recommandons {recommendation}.",
+        "consulting": "un audit stratégique et un accompagnement personnalisé",
+        "training": "un programme de formation adapté à votre niveau",
+        "button": "Voir ma recommandation",
+        "reset": "Recommencer"
+      }
+    }
+  },
+  "Animation3D": {
+    "hero": {
+      "badge": "Animation 3D",
+      "title": "Donnez vie à vos idées avec un impact visuel",
+      "subtitle": "Chez Waitla, nous transformons vos concepts en animations 3D immersives qui captivent, expliquent et séduisent votre audience. Nos créations ne sont pas juste esthétiques : elles renforcent votre storytelling, vos campagnes marketing et vos produits."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "animation": {
+        "title": "Animation 3D & Motion Design",
+        "items": [
+          "Vidéos 3D pour produits et services",
+          "Motion design pour réseaux sociaux, sites web et publicité",
+          "Présentations et démonstrations interactives",
+          "Visualisation de concepts et prototypes"
+        ]
+      },
+      "marketing": {
+        "title": "Contenu marketing immersif",
+        "items": [
+          "Storytelling visuel en 3D",
+          "Contenu publicitaire & social media",
+          "Capsules promotionnelles et aftermovies",
+          "Animations intégrées aux campagnes Ads ou UGC"
+        ]
+      },
+      "integration": {
+        "title": "Intégration digitale",
+        "items": [
+          "Optimisation pour web et mobile",
+          "Intégration dans vos sites, réseaux sociaux et applications",
+          "Contenu pensé pour conversion et engagement",
+          "Possibilité de lier avec IA, CRM et campagnes Ads"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "subtitle": "Chez Waitla, chaque animation 3D est conçue pour marquer les esprits et générer de l'engagement :",
+      "steps": [
+        {
+          "title": "Concevoir",
+          "description": "comprendre votre concept et votre objectif"
+        },
+        {
+          "title": "Créer",
+          "description": "développer une animation immersive et originale"
+        },
+        {
+          "title": "Diffuser",
+          "description": "intégrer et optimiser pour vos campagnes marketing"
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Expertise créative et technique de l'équipe",
+        "Animation pensée pour marketing et storytelling",
+        "Contenu immersif pour tous les supports (social media, site, événement)",
+        "Expérience internationale et multiculturelle",
+        "Qualité professionnelle et rendu premium"
+      ]
+    },
+    "who": {
+      "title": "Pour qui ?",
+      "items": [
+        "Marques de consommation et e-commerce",
+        "Startups tech et projets innovants",
+        "Événements et campagnes promotionnelles",
+        "Agences ou entreprises souhaitant contenu visuel impactant"
+      ]
+    },
+    "cta": {
+      "kicker": "Appel à l'action",
+      "title": "Vous voulez des animations 3D qui captivent et convertissent ?",
+      "subtitle": "Discutons de votre projet",
+      "button": "Réserver un appel",
+      "tagline": "Vos idées prennent vie en 3D"
+    },
+    "visualizer": {
+      "title": "Visualiseur de projet",
+      "subtitle": "Choisissez un concept pour voir un aperçu",
+      "concepts": [
+        {
+          "name": "Product Explainer",
+          "description": "Animation explicative de produit"
+        },
+        {
+          "name": "Social Media Ad",
+          "description": "Publicité pour réseaux sociaux"
+        },
+        {
+          "name": "Brand Mascot",
+          "description": "Mascotte de marque animée"
+        }
+      ],
+      "preview": "Aperçu de votre animation",
+      "button": "Discutons de votre projet"
+    }
+  },
+  "Design": {
+    "hero": {
+      "badge": "Design",
+      "title": "Donnez une identité forte à votre marque",
+      "subtitle": "Chez Waitla, nous croyons qu'un bon design ne se contente pas d'être esthétique. Il raconte votre histoire, renforce votre image et convertit vos clients. Nous créons des visuels et des expériences qui captivent et marquent durablement."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "identity": {
+        "title": "Identité visuelle",
+        "items": [
+          "Logos et chartes graphiques",
+          "Branding complet pour marques et entreprises",
+          "Guidelines et éléments graphiques cohérents"
+        ]
+      },
+      "digital": {
+        "title": "Design digital",
+        "items": [
+          "Sites web, landing pages et interfaces UX/UI",
+          "Contenu pour réseaux sociaux (posts, reels, stories)",
+          "Motion design et animations intégrées",
+          "Publicité digitale visuellement impactante"
+        ]
+      },
+      "print": {
+        "title": "Design print & packaging",
+        "items": [
+          "Flyers, brochures et supports commerciaux",
+          "Packaging produit et merchandising",
+          "Affiches et signalétique pour événements"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "subtitle": "Chez Waitla, le design est stratégique et émotionnel :",
+      "steps": [
+        {
+          "title": "Comprendre",
+          "description": "votre marque et vos objectifs"
+        },
+        {
+          "title": "Créer",
+          "description": "des visuels qui parlent à votre audience"
+        },
+        {
+          "title": "Déployer",
+          "description": "un design cohérent sur tous vos supports"
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Expertise créative et technique internationale",
+        "Design pensé pour branding, marketing et conversion",
+        "Solutions sur mesure pour chaque projet",
+        "Cohérence visuelle sur tous les canaux",
+        "Expérience utilisateur au coeur de chaque création"
+      ]
+    },
+    "who": {
+      "title": "Pour qui ?",
+      "items": [
+        "Marques et startups",
+        "E-commerce et entreprises B2B/B2C",
+        "Événements, campagnes et projets culturels",
+        "Toute organisation cherchant un design fort et mémorable"
+      ]
+    },
+    "styleExplorer": {
+      "title": "Explorateur de styles",
+      "subtitle": "Découvrez comment le même message peut être conçu différemment",
+      "styles": [
+        {
+          "name": "Moderne & Minimaliste",
+          "description": "Lignes épurées, espace blanc, typographie élégante"
+        },
+        {
+          "name": "Audacieux & Expressif",
+          "description": "Couleurs vives, formes dynamiques, impact visuel fort"
+        },
+        {
+          "name": "Élégant & Premium",
+          "description": "Raffinement, détails soignés, sophistication"
+        }
+      ]
+    },
+    "cta": {
+      "kicker": "Appel à l'action",
+      "title": "Vous voulez un design qui raconte votre histoire et convertit ?",
+      "subtitle": "Créons votre identité ensemble",
+      "button": "Réserver un appel",
+      "tagline": "Un design qui parle et convertit"
+    },
+    "projectStarter": {
+      "title": "Démarreur de projet",
+      "subtitle": "Répondez à quelques questions pour obtenir une suggestion de direction design",
+      "question1": "Quel est votre secteur d'activité ?",
+      "industries": [
+        "E-commerce",
+        "Tech / Startup",
+        "Événementiel",
+        "Culture / Art"
+      ],
+      "question2": "Quel est votre objectif principal ?",
+      "goals": [
+        "Renforcer la marque",
+        "Augmenter les ventes",
+        "Créer de l'engagement",
+        "Lancer un produit"
+      ],
+      "result": {
+        "title": "Direction design suggérée",
+        "description": "Basé sur vos réponses, nous recommandons {recommendation}.",
+        "modern": "une approche moderne et minimaliste",
+        "bold": "un design audacieux et expressif",
+        "elegant": "une direction élégante et premium",
+        "reset": "Recommencer"
+      },
+      "button": "Commencer mon projet"
+    }
+  },
+  "PrintingAndBranding": {
+    "hero": {
+      "badge": "Impression, Habillage & Décoration",
+      "title": "Donnez vie à votre marque dans le monde réel",
+      "subtitle": "Chez Waitla, nous transformons vos idées en supports visuels concrets, visibles partout. Du habillage de véhicules à la décoration intérieure en passant par les panneaux publicitaires, nous créons des impressions qui attirent l'attention et renforcent votre image."
+    },
+    "whatWeDo": {
+      "title": "Ce que nous faisons",
+      "printing": {
+        "title": "Impression & panneaux publicitaires",
+        "items": [
+          "Panneaux publicitaires (intérieur et extérieur)",
+          "Affiches, kakemonos et signalétiques",
+          "Bâches, stickers et supports grand format",
+          "Optimisation du design pour visibilité maximale"
+        ]
+      },
+      "branding": {
+        "title": "Habillage & branding",
+        "items": [
+          "Habillage de véhicules (voitures, bus, camions)",
+          "Enseignes et vitrines de magasins",
+          "Branding événementiel et promotionnel",
+          "Supports personnalisés selon votre identité visuelle"
+        ]
+      },
+      "decoration": {
+        "title": "Décoration intérieure",
+        "items": [
+          "Décoration d'espaces professionnels et commerciaux",
+          "Murales, impressions sur meubles ou surfaces",
+          "Création d'ambiances visuelles en accord avec votre branding",
+          "Intégration de storytelling et d'UGC pour immersion"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Notre approche",
+      "subtitle": "Chez Waitla, chaque support imprimé ou décoratif est une extension de votre marque :",
+      "steps": [
+        {
+          "title": "Concevoir",
+          "description": "comprendre vos objectifs et votre identité"
+        },
+        {
+          "title": "Créer",
+          "description": "design et impression adaptés"
+        },
+        {
+          "title": "Installer / déployer",
+          "description": "supports impactants et cohérents"
+        },
+        {
+          "title": "Optimiser",
+          "description": "visibilité et performance selon l'usage"
+        }
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir Waitla ?",
+      "items": [
+        "Expertise en branding, design et impression",
+        "Solutions sur mesure pour tout type de support",
+        "Visibilité maximale grâce à un design stratégique",
+        "Expérience internationale et multiculturelle de l'équipe",
+        "Coordination complète de la conception à l'installation"
+      ]
+    },
+    "who": {
+      "title": "Pour qui ?",
+      "items": [
+        "Marques et entreprises B2C/B2B",
+        "Événements et campagnes promotionnelles",
+        "Commerces et espaces professionnels",
+        "Projets nécessitant des impressions et décorations sur mesure"
+      ]
+    },
+    "cta": {
+      "kicker": "Appel à l'action",
+      "title": "Vous voulez que votre marque se fasse remarquer partout ?",
+      "subtitle": "Discutons de votre projet d'impression et habillage",
+      "button": "Réserver un appel",
+      "tagline": "Votre marque partout, visible et mémorable"
+    }
+  }
 }

@@ -35,9 +35,16 @@ export default async function LocaleLayout({
   }
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
-      {children}
-    </NextIntlClientProvider>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.setAttribute('lang', '${locale}');`,
+        }}
+      />
+      <NextIntlClientProvider messages={messages} locale={locale}>
+        {children}
+      </NextIntlClientProvider>
+    </>
   );
 }
 
