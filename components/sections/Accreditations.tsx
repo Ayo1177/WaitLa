@@ -10,7 +10,7 @@ const certifications = [
   {
     nameKey: "cert.googleAds",
     descKey: "cert.googleAdsDesc",
-    logo: "/badges/google ads.png",
+    logo: "/badges/google certification.png",
   },
   {
     nameKey: "cert.googleAnalytics",
@@ -21,6 +21,11 @@ const certifications = [
     nameKey: "cert.meta",
     descKey: "cert.metaDesc",
     logo: "/badges/meta media buying.jpeg",
+  },
+  {
+    nameKey: "cert.hubspot",
+    descKey: "cert.hubspotDesc",
+    logo: "/badges/hubspot.png",
   },
 ];
 

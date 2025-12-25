@@ -89,7 +89,7 @@ export default function ServiceHero({ variant = "full" }: ServiceHeroProps) {
           href="/contact"
           className="inline-flex items-center gap-3 rounded-full bg-white text-primary px-8 py-4 text-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 group"
         >
-          {t("cta")}
+          {t("cta.button")}
           <span className="group-hover:translate-x-1 transition-transform">→</span>
         </Link>
       </div>

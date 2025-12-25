@@ -266,8 +266,10 @@ export default function BrandingPage() {
         </section>
 
         {/* 4) Our approach */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-12 xl:px-16 bg-white">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative z-20 py-20 px-4 sm:px-6 lg:px-12 xl:px-16 bg-white overflow-hidden">
+          {/* Fading red background gradient - seamless transition from section above */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-dark via-primary/30 via-primary/10 to-transparent pointer-events-none" style={{ height: '70%' }} />
+          <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
                 {t("ourApproach.title")}
@@ -308,7 +310,7 @@ export default function BrandingPage() {
         </section>
 
         {/* 5) Why / Who */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-12 xl:px-16 bg-gray-50">
+        <section className="relative z-20 py-20 px-4 sm:px-6 lg:px-12 xl:px-16 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="grid gap-12 md:grid-cols-[minmax(0,1fr)_140px_minmax(0,1fr)] md:gap-0">
               <motion.div
@@ -414,7 +416,7 @@ export default function BrandingPage() {
           </div>
         </section>
       </main>
-      <div className="relative z-10">
+      <div className="relative z-30">
         <Footer />
       </div>
     </div>

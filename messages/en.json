@@ -70,7 +70,9 @@
       "googleAnalytics": "Google Analytics",
       "googleAnalyticsDesc": "Certified Google Analytics partner",
       "meta": "Meta Media Buying",
-      "metaDesc": "Certified Facebook and Instagram advertising"
+      "metaDesc": "Certified Facebook and Instagram advertising",
+      "hubspot": "HubSpot",
+      "hubspotDesc": "Certified HubSpot partner"
     }
   },
   "ClientReferences": {
@@ -199,7 +201,8 @@
     },
     "cta": {
       "headline": "Take action",
-      "tagline": "More than an event, a brand experience"
+      "tagline": "More than an event, a brand experience",
+      "button": "Book a call"
     }
   },
   "AgentIAAndCRM": {
@@ -1372,5 +1375,38 @@
     "backToHome": "Back to Home",
     "contactUs": "Contact Us",
     "progressLabel": "Development Progress"
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Ready to take your brand to the next level? Let's discuss how we can help you achieve your digital marketing goals.",
+    "form": {
+      "title": "Send us a message",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "placeholder": {
+        "fullName": "John Doe",
+        "email": "john@example.com",
+        "phone": "+1 (234) 567-890",
+        "message": "Tell us about your project..."
+      },
+      "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+      "error": "Something went wrong. Please try again or contact us directly."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "businessHours": "Business Hours",
+      "addressLine1": "123 Business St",
+      "addressLine2": "City, Country 12345",
+      "hoursWeekday": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "hoursWeekend": "Saturday - Sunday: Closed",
+      "mapsPlaceholder": "Google Maps integration"
+    }
   }
 }
