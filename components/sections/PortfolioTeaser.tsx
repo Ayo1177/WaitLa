@@ -238,7 +238,7 @@ export default function PortfolioTeaser() {
   const handleMouseLeave = () => setIsScrolling(true);
 
   return (
-    <section ref={ref} className="bg-gradient-to-r from-primary-dark via-primary to-accent-dark">
+    <section ref={ref} className="relative z-20 -mt-1 bg-gradient-to-r from-primary-dark via-primary to-accent-dark">
       {/* Infinite horizontal scrolling gallery - full width, no padding */}
       <div className="w-full">
         <div

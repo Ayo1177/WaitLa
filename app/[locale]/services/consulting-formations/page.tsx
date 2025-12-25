@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useState, useRef } from "react";
 import { ArrowRight, CheckCircle2, TrendingUp, BookOpen, Users, Lightbulb, Target, GraduationCap, Briefcase, Sparkles } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import ServiceHero from "./hero";
 
 function ConsultingBackground() {
   return (
@@ -105,29 +106,8 @@ export default function ConsultingAndTrainingPage() {
   return (
     <>
       <Header />
-      <ConsultingBackground />
-      
       <main className="relative z-20 min-h-screen">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 pt-32 pb-20">
-          <div className="max-w-5xl mx-auto text-center text-white relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-block px-4 py-2 mb-6 text-sm font-semibold uppercase tracking-wide bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-                {t("hero.badge")}
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                {t("hero.title")}
-              </h1>
-              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                {t("hero.subtitle")}
-              </p>
-            </motion.div>
-          </div>
-        </section>
+        <ServiceHero variant="full" />
 
         {/* Pathway Selector */}
         <section className="relative z-20 bg-white py-20 px-4 sm:px-6 lg:px-12 xl:px-16">

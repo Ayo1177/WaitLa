@@ -41,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white opacity-100 relative -z-10" style={{ backgroundColor: '#111827' }} aria-labelledby="footer-heading">
+    <footer className="bg-gray-900 text-white opacity-100 relative z-20" style={{ backgroundColor: '#111827' }} aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { ArrowRight, CheckCircle2, Users, Printer, Car, Home, Target, PenTool, Share2, TrendingUp } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import ServiceHero from "./hero";
 
 function PrintingBackground() {
   return (
@@ -80,28 +82,9 @@ export default function PrintingAndBrandingPage() {
       <PrintingBackground />
       
       <main className="relative z-20 min-h-screen">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 pt-32 pb-20">
-          <div className="max-w-5xl mx-auto text-center text-white relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-block px-4 py-2 mb-6 text-sm font-semibold uppercase tracking-wide bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-                {t("hero.badge")}
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                {t("hero.title")}
-              </h1>
-              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                {t("hero.subtitle")}
-              </p>
-            </motion.div>
-          </div>
-        </section>
+        <ServiceHero variant="full" />
 
-        {/* Core Services */}
+        {/* Core Services - What We Do */}
         <section className="relative z-20 bg-white py-20 px-4 sm:px-6 lg:px-12 xl:px-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -116,46 +99,76 @@ export default function PrintingAndBrandingPage() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-12">
               {services.map((service, idx) => {
                 const Icon = service.icon;
+
+                const imageSrcMap: Record<string, string> = {
+                  printing: "/habillage/panneau%20publicitaire%20card.jpg",
+                  branding: "/habillage/habillage%20card.png",
+                  decoration: "/habillage/interior%20decoration%20card.webp",
+                };
+
+                const imageSrc = imageSrcMap[service.key] ?? "/habillage/habillage%20card.png";
+                const reverseOnDesktop = idx % 2 === 1;
+
                 return (
-                  <motion.div
+                  <motion.article
                     key={service.key}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: idx * 0.15 }}
-                    whileHover={{ scale: 1.03, y: -5 }}
-                    className="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-primary transition-all shadow-lg hover:shadow-2xl"
+                    className={`group relative flex flex-col gap-8 bg-white rounded-3xl border border-gray-200 shadow-lg overflow-hidden lg:items-stretch lg:flex-row ${
+                      reverseOnDesktop ? "lg:flex-row-reverse" : ""
+                    }`}
                   >
-                    <div className="flex flex-col items-center text-center mb-6">
-                      <div className="relative mb-4">
-                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all" />
-                        <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Icon className="w-8 h-8 text-white" />
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
-                        {service.title}
-                      </h3>
+                    {/* Image side */}
+                    <div className="relative w-full lg:w-1/2 h-64 md:h-80 overflow-hidden">
+                      <Image
+                        src={imageSrc}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        priority={idx === 0}
+                      />
                     </div>
-                    <ul className="space-y-3">
-                      {service.items.map((item, i) => (
-                        <motion.li
-                          key={i}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: idx * 0.15 + i * 0.1 }}
-                          className="flex items-start gap-2 text-gray-700"
-                        >
-                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{item}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
+
+                    {/* Content side */}
+                    <div className="relative w-full lg:w-1/2 p-8 sm:p-10 flex flex-col justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      <div className="relative flex flex-col gap-4">
+                        <div className="flex items-center gap-4 mb-2">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+                            <div className="relative w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
+                              <Icon className="w-7 h-7 text-white" />
+                            </div>
+                          </div>
+                          <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </h3>
+                        </div>
+
+                        <ul className="space-y-3">
+                          {service.items.map((item, i) => (
+                            <motion.li
+                              key={i}
+                              initial={{ opacity: 0, x: reverseOnDesktop ? 10 : -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.4, delay: idx * 0.15 + i * 0.08 }}
+                              className="flex items-start gap-2 text-gray-700"
+                            >
+                              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                              <span className="text-sm">{item}</span>
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </motion.article>
                 );
               })}
             </div>
@@ -302,8 +315,17 @@ export default function PrintingAndBrandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative z-20 py-20 px-4 sm:px-6 lg:px-12 xl:px-16">
-          <div className="max-w-4xl mx-auto text-center text-white">
+        <section
+          className="relative z-10 py-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden"
+          style={{
+            backgroundImage: "url('/habillage/habillage%20hero.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary-dark/90 to-primary/95" />
+          <div className="relative max-w-4xl mx-auto text-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

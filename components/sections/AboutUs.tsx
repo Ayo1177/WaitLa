@@ -81,7 +81,7 @@ export default function AboutUs() {
   return (
     <motion.section
       ref={ref}
-      className="relative overflow-visible bg-gradient-to-r from-primary-dark via-primary to-accent-dark py-24 sm:py-32 lg:py-40"
+      className="relative overflow-visible bg-gradient-to-r from-primary-dark via-primary to-accent-dark py-24 sm:py-32 lg:py-40 z-20"
       style={{ opacity: sectionOpacity, y: sectionY }}
     >
       <div className="relative w-full px-6 sm:px-8 lg:px-12 xl:px-16 lg:pb-32">

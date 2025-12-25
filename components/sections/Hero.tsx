@@ -27,13 +27,15 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate overflow-hidden bg-gradient-to-b from-[#fff2f2] via-white to-white px-4 sm:px-8 lg:px-12 xl:px-16 pt-14 sm:pt-24"
+      className="relative isolate overflow-hidden bg-gradient-to-b from-[#fff2f2] via-white to-white min-h-screen"
     >
+      {/* Fixed text content - stays static on scroll with lowest z-index */}
       <motion.div
-        className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56"
+        className="fixed inset-0 flex items-center justify-center -z-10 pointer-events-none"
         style={{ opacity: heroOpacityValue }}
       >
-        <div className="text-center">
+        <div className="mx-auto max-w-5xl px-4 sm:px-8 lg:px-12 xl:px-16 pointer-events-auto">
+          <div className="text-center pt-14 sm:pt-24">
           {mounted && (
             <motion.h1
               className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
@@ -98,8 +100,12 @@ export default function Hero() {
               </div>
             </motion.div>
           )}
+          </div>
         </div>
       </motion.div>
+      
+      {/* Spacer to maintain scroll height */}
+      <div className="h-screen" />
     </section>
   );
 }
