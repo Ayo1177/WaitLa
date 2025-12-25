@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
@@ -101,8 +101,29 @@ export default function Header() {
   }, [servicesDropdownOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] text-white shadow-lg">
-      <nav className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes hourglass {
+          0%, 100% {
+            transform: scale(1) perspective(1000px) rotateX(0deg);
+          }
+          50% {
+            transform: scale(0.95) perspective(1000px) rotateX(5deg);
+          }
+        }
+        .hourglass-effect {
+          transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hourglass-effect:hover {
+          animation: hourglass 0.6s ease-in-out;
+          transform: scale(1.05) perspective(1000px) rotateX(-2deg);
+        }
+        .hourglass-effect:active {
+          transform: scale(0.98) perspective(1000px) rotateX(2deg);
+        }
+      `}} />
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] text-white shadow-lg">
+        <nav className="flex w-full items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
         <div className="flex items-center lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
@@ -155,7 +176,7 @@ export default function Header() {
                       }
                     }}
                     className={cn(
-                      "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide whitespace-nowrap transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary",
+                      "relative flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wide whitespace-nowrap transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary hourglass-effect",
                       isActive(item.href)
                         ? "bg-white text-primary-dark shadow-[0_10px_30px_rgba(255,255,255,0.25)]"
                         : "text-white/90 hover:bg-white/15"
@@ -232,7 +253,7 @@ export default function Header() {
                 type="button"
                 onClick={() => router.replace(pathname, { locale: "fr" })}
                 className={cn(
-                  "rounded-full px-3 py-1 transition",
+                  "rounded-full px-3 py-1 transition hourglass-effect",
                   locale === "fr"
                     ? "bg-white text-primary-dark"
                     : "text-white/80 hover:bg-white/10"
@@ -244,7 +265,7 @@ export default function Header() {
                 type="button"
                 onClick={() => router.replace(pathname, { locale: "en" })}
                 className={cn(
-                  "rounded-full px-3 py-1 transition",
+                  "rounded-full px-3 py-1 transition hourglass-effect",
                   locale === "en"
                     ? "bg-white text-primary-dark"
                     : "text-white/80 hover:bg-white/10"
@@ -259,11 +280,11 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_35px_rgba(229,57,53,0.35)] transition hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_35px_rgba(229,57,53,0.35)] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 hourglass-effect"
           >
             {tNav("contactCta")}
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
-              <ArrowUpRight className="h-4 w-4" />
+              <Phone className="h-4 w-4" />
             </span>
           </Link>
         </div>
@@ -344,7 +365,8 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+      </header>
+    </>
   );
 }
 

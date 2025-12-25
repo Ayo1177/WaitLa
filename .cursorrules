@@ -40,17 +40,32 @@
 - Better for SSR/SSG
 
 ### Animations
-**Framer Motion**
-- React-friendly API
-- Excellent performance with layout animations
-- Perfect for scroll animations, hover effects
-- Supports reduced motion preferences
-- Lightweight compared to GSAP for most use cases
+**GSAP (GreenSock Animation Platform)** - Primary Animation Library
+- ✅ Professional-grade JavaScript animation library
+- ✅ Industry standard for high-performance animations
+- ✅ Excellent performance with hardware acceleration
+- ✅ Powerful timeline-based animations
+- ✅ ScrollTrigger plugin for advanced scroll animations
+- ✅ Works seamlessly with React via useGSAP() hook
+- ✅ Supports reduced motion preferences
+- ✅ Comprehensive plugin ecosystem (ScrollTrigger, SplitText, MorphSVG, etc.)
+- ✅ Animate CSS properties, SVG, canvas, and more
+- ✅ Documentation: https://gsap.com/docs/v3/
 
-**Consider GSAP if:**
-- Complex timeline animations needed
+**When to use GSAP:**
+- Complex timeline animations
 - Advanced scroll-triggered sequences
-- Timeline-based video-like animations
+- Professional-grade motion design
+- SVG animations
+- Text animations (SplitText)
+- Scroll-based animations (ScrollTrigger)
+- Any animation requiring precise control and performance
+
+**Framer Motion** - Alternative for React-specific needs
+- React-friendly API
+- Good for simple component animations
+- Layout animations
+- Can be used alongside GSAP for specific React component animations
 
 ### Content Management
 **Sanity CMS (Recommended)**

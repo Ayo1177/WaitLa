@@ -22,10 +22,10 @@
   },
   "Hero": {
     "title": {
-      "main": "Take Your Brand to the",
-      "highlight": "Next Level"
+      "main": "Waitla, your marketing growth partner",
+      "highlight": ""
     },
-    "subtitle": "Creative digital marketing agency specializing in web development, mobile apps, digital strategy, and media buying. We bring creativity, relevance, and performance to every project.",
+    "subtitle": "We create strategies that attract, engage and convert.",
     "primaryCta": "Book a call",
     "secondaryCta": "View our work",
     "stat": {
@@ -1358,5 +1358,19 @@
       "button": "Book a Call",
       "tagline": "Your brand everywhere, visible and memorable"
     }
+  },
+  "WebDevelopment": {
+    "hero": {
+      "badge": "Web Development",
+      "title": "Your tailor-made digital presence",
+      "subtitle": "At Waitla, we don't just build websites—we create high-performing platforms designed to convert visitors into customers and strengthen your brand."
+    }
+  },
+  "InProgress": {
+    "title": "Page Under Construction",
+    "description": "We're working hard to bring you an amazing experience. This page will be available soon!",
+    "backToHome": "Back to Home",
+    "contactUs": "Contact Us",
+    "progressLabel": "Development Progress"
   }
 }

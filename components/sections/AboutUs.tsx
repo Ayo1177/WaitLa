@@ -139,10 +139,37 @@ export default function AboutUs() {
 
         {/* KPIs positioned in an arc pattern */}
         <div ref={kpiRef} className="relative mt-16 lg:mt-24 flex justify-center">
-          <div className="relative w-full max-w-6xl h-72 lg:h-96">
+          {/* Single column layout for screens narrower than two bubbles width */}
+          <div className="flex flex-col gap-8 max-[450px]:flex min-[450px]:hidden w-full max-w-xs">
+            {kpis.map((kpi, index) => (
+              <motion.div
+                key={index}
+                className="flex justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={
+                  kpisInView
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.9 }
+                }
+                transition={{
+                  duration: 0.6,
+                  delay: 0.1 * (index + 1),
+                  type: "spring",
+                  stiffness: 100,
+                }}
+              >
+                <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                  <CountUpNumber kpi={kpi} isInView={kpisInView} label={t(kpi.labelKey)} />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Arc layout for screens wider than two bubbles width */}
+          <div className="hidden min-[450px]:block relative w-full max-w-6xl h-[400px] md:h-72 lg:h-96">
             {/* KPI 1 - Left side of arc (lower) */}
             <motion.div
-              className="absolute left-[5%] bottom-0 -translate-x-1/2"
+              className="absolute left-[8%] md:left-[5%] bottom-0 md:bottom-0 -translate-x-1/2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
                 kpisInView
@@ -163,7 +190,7 @@ export default function AboutUs() {
 
             {/* KPI 2 - Left-center of arc (higher) */}
             <motion.div
-              className="absolute left-[28%] bottom-10 -translate-x-1/2 lg:bottom-16"
+              className="absolute left-[22%] md:left-[28%] bottom-36 md:bottom-10 lg:bottom-16 -translate-x-1/2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
                 kpisInView
@@ -184,7 +211,7 @@ export default function AboutUs() {
 
             {/* KPI 3 - Right-center of arc (higher) */}
             <motion.div
-              className="absolute right-[28%] bottom-10 -translate-x-1/2 lg:bottom-16"
+              className="absolute right-[22%] md:right-[28%] bottom-36 md:bottom-10 lg:bottom-16 translate-x-1/2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
                 kpisInView
@@ -205,7 +232,7 @@ export default function AboutUs() {
 
             {/* KPI 4 - Right side of arc (lower) */}
             <motion.div
-              className="absolute right-[5%] bottom-0 translate-x-1/2"
+              className="absolute right-[8%] md:right-[5%] bottom-0 md:bottom-0 translate-x-1/2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
                 kpisInView

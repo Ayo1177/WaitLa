@@ -22,10 +22,10 @@
   },
   "Hero": {
     "title": {
-      "main": "Faites passer votre marque au",
-      "highlight": "niveau supérieur"
+      "main": "Waitla, votre partenaire de",
+      "highlight": "croissance marketing"
     },
-    "subtitle": "Agence de marketing digital créative, spécialisée dans le développement web, les applications mobiles, la stratégie digitale et l'achat média. Nous apportons créativité, pertinence et performance à chaque projet.",
+    "subtitle": "Nous créons des stratégies qui attirent, engagent et convertissent.",
     "primaryCta": "Réserver un appel",
     "secondaryCta": "Voir nos réalisations",
     "stat": {
@@ -1358,5 +1358,19 @@
       "button": "Réserver un appel",
       "tagline": "Votre marque partout, visible et mémorable"
     }
+  },
+  "WebDevelopment": {
+    "hero": {
+      "badge": "Création de Site Web",
+      "title": "Votre présence digitale sur mesure",
+      "subtitle": "Chez Waitla, nous ne créons pas seulement des sites web, nous construisons des plateformes performantes, capables de convertir vos visiteurs en clients et de renforcer votre image de marque."
+    }
+  },
+  "InProgress": {
+    "title": "Page en Construction",
+    "description": "Nous travaillons dur pour vous offrir une expérience exceptionnelle. Cette page sera bientôt disponible !",
+    "backToHome": "Retour à l'accueil",
+    "contactUs": "Nous contacter",
+    "progressLabel": "Progression du développement"
   }
 }

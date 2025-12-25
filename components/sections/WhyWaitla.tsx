@@ -177,11 +177,12 @@ export default function WhyWaitla() {
                 {/* Content */}
                 <div className="relative z-10">
                   <p 
-                    className="text-lg leading-8 text-center font-serif italic"
+                    className="text-xl sm:text-2xl leading-relaxed text-center font-serif italic font-bold"
                     style={{ 
                       fontFamily: 'Georgia, "Times New Roman", Times, serif',
-                      color: '#5a4a3a',
-                      textShadow: '0 1px 2px rgba(255, 255, 255, 0.5)',
+                      color: '#2d2418',
+                      textShadow: '0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(255, 255, 255, 0.6)',
+                      letterSpacing: '0.01em',
                     }}
                   >
                     Ne pas faire comme les autres agences, mais faire mieux, différemment et intelligemment.
