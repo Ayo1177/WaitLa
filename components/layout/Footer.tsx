@@ -22,12 +22,6 @@ export default function Footer() {
   const t = useTranslations("Footer");
   
   const navigation = {
-    services: [
-      { nameKey: "services.digitalStrategy", href: "/services#digital-strategy" },
-      { nameKey: "services.brandContent", href: "/services#brand-content" },
-      { nameKey: "services.webDevelopment", href: "/services#web-development" },
-      { nameKey: "services.mediaBuying", href: "/services#media-buying" },
-    ],
     company: [
       { nameKey: "company.about", href: "/about" },
       { nameKey: "company.team", href: "/team" },
@@ -45,18 +39,19 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto px-6 pb-8 pt-16 sm:pt-24 lg:px-12 xl:px-16 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-12 xl:px-16 lg:pt-32">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8 xl:gap-12 items-start">
+          {/* Company Info Column - Takes 4 columns on large screens */}
+          <div className="space-y-8 sm:col-span-2 lg:col-span-4">
             <div>
               <Image
-                src="/logo.jpg"
+                src="/white_logo.svg"
                 alt="WaitLa logo"
                 width={160}
                 height={48}
                 className="h-12 w-auto"
               />
-              <p className="mt-4 text-sm leading-6 text-gray-300">
+              <p className="mt-4 text-sm leading-6 text-gray-300 max-w-xs">
                 {t("description")}
               </p>
             </div>
@@ -74,85 +69,70 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6">{t("services.title")}</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.services.map((item) => (
-                    <li key={item.nameKey}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
-                      >
-                        {t(item.nameKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6">{t("company.title")}</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.nameKey}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
-                      >
-                        {t(item.nameKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6">{t("contact.title")}</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="mailto:contact@waitla.com"
-                      className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    >
-                      <Mail className="h-4 w-4" />
-                      contact@waitla.com
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="tel:+1234567890"
-                      className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
-                    >
-                      <Phone className="h-4 w-4" />
-                      +1 (234) 567-890
-                    </a>
-                  </li>
-                  <li>
-                    <div className="flex items-start gap-2 text-sm leading-6 text-gray-300">
-                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                      <span>123 Business St, City, Country</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6">{t("legal.title")}</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.nameKey}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
-                      >
-                        {t(item.nameKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          
+          {/* Company Column - Takes 3 columns on large screens */}
+          <div className="sm:col-span-1 lg:col-span-3">
+            <h3 className="text-sm font-semibold leading-6">{t("company.title")}</h3>
+            <ul role="list" className="mt-6 space-y-4">
+              {navigation.company.map((item) => (
+                <li key={item.nameKey}>
+                  <Link
+                    href={item.href}
+                    className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
+                  >
+                    {t(item.nameKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Contact Column - Takes 3 columns on large screens */}
+          <div className="sm:col-span-1 lg:col-span-3">
+            <h3 className="text-sm font-semibold leading-6">{t("contact.title")}</h3>
+            <ul role="list" className="mt-6 space-y-4">
+              <li>
+                <a
+                  href="mailto:contact@waitla.com"
+                  className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
+                >
+                  <Mail className="h-4 w-4 flex-shrink-0" />
+                  <span className="break-words">contact@waitla.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+1234567890"
+                  className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
+                >
+                  <Phone className="h-4 w-4 flex-shrink-0" />
+                  <span>+1 (234) 567-890</span>
+                </a>
+              </li>
+              <li>
+                <div className="flex items-start gap-2 text-sm leading-6 text-gray-300">
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span className="break-words">123 Business St, City, Country</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Legal Column - Takes 2 columns on large screens */}
+          <div className="sm:col-span-1 lg:col-span-2">
+            <h3 className="text-sm font-semibold leading-6">{t("legal.title")}</h3>
+            <ul role="list" className="mt-6 space-y-4">
+              {navigation.legal.map((item) => (
+                <li key={item.nameKey}>
+                  <Link
+                    href={item.href}
+                    className="text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
+                  >
+                    {t(item.nameKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">

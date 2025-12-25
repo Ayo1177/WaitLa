@@ -5,8 +5,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactFormData } from "@/lib/validations";
 import Button from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
+  const t = useTranslations("Contact.form");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
@@ -64,7 +66,7 @@ export default function ContactForm() {
           htmlFor="name"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Full Name <span className="text-red-500">*</span>
+          {t("fullName")} <span className="text-red-500">*</span>
         </label>
         <div className="mt-2">
           <input
@@ -72,7 +74,7 @@ export default function ContactForm() {
             id="name"
             {...register("name")}
             className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-            placeholder="John Doe"
+            placeholder={t("placeholder.fullName")}
             aria-invalid={errors.name ? "true" : "false"}
             aria-describedby={errors.name ? "name-error" : undefined}
           />
@@ -89,7 +91,7 @@ export default function ContactForm() {
           htmlFor="email"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Email <span className="text-red-500">*</span>
+          {t("email")} <span className="text-red-500">*</span>
         </label>
         <div className="mt-2">
           <input
@@ -97,7 +99,7 @@ export default function ContactForm() {
             id="email"
             {...register("email")}
             className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-            placeholder="john@example.com"
+            placeholder={t("placeholder.email")}
             aria-invalid={errors.email ? "true" : "false"}
             aria-describedby={errors.email ? "email-error" : undefined}
           />
@@ -114,7 +116,7 @@ export default function ContactForm() {
           htmlFor="phone"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Phone
+          {t("phone")}
         </label>
         <div className="mt-2">
           <input
@@ -122,7 +124,7 @@ export default function ContactForm() {
             id="phone"
             {...register("phone")}
             className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-            placeholder="+1 (234) 567-890"
+            placeholder={t("placeholder.phone")}
             aria-invalid={errors.phone ? "true" : "false"}
             aria-describedby={errors.phone ? "phone-error" : undefined}
           />
@@ -139,7 +141,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Message <span className="text-red-500">*</span>
+          {t("message")} <span className="text-red-500">*</span>
         </label>
         <div className="mt-2">
           <textarea
@@ -147,7 +149,7 @@ export default function ContactForm() {
             rows={6}
             {...register("message")}
             className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-            placeholder="Tell us about your project..."
+            placeholder={t("placeholder.message")}
             aria-invalid={errors.message ? "true" : "false"}
             aria-describedby={errors.message ? "message-error" : undefined}
           />
@@ -170,8 +172,7 @@ export default function ContactForm() {
           aria-live="polite"
         >
           <p className="text-sm font-medium text-green-800">
-            Thank you! Your message has been sent successfully. We'll get back to
-            you soon.
+            {t("success")}
           </p>
         </div>
       )}
@@ -183,7 +184,7 @@ export default function ContactForm() {
           aria-live="polite"
         >
           <p className="text-sm font-medium text-red-800">
-            Something went wrong. Please try again or contact us directly.
+            {t("error")}
           </p>
         </div>
       )}
@@ -195,7 +196,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full"
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? t("sending") : t("sendMessage")}
         </Button>
       </div>
     </form>

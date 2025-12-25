@@ -70,7 +70,9 @@
       "googleAnalytics": "Google Analytics",
       "googleAnalyticsDesc": "Partenaire certifié Google Analytics",
       "meta": "Achat média Meta",
-      "metaDesc": "Publicité certifiée Facebook et Instagram"
+      "metaDesc": "Publicité certifiée Facebook et Instagram",
+      "hubspot": "HubSpot",
+      "hubspotDesc": "Partenaire certifié HubSpot"
     }
   },
   "ClientReferences": {
@@ -199,7 +201,8 @@
     },
     "cta": {
       "headline": "Passer à l'action",
-      "tagline": "Plus qu'un événement, une expérience de marque"
+      "tagline": "Plus qu'un événement, une expérience de marque",
+      "button": "Réserver un appel"
     }
   },
   "AgentIAAndCRM": {
@@ -1372,5 +1375,38 @@
     "backToHome": "Retour à l'accueil",
     "contactUs": "Nous contacter",
     "progressLabel": "Progression du développement"
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "description": "Prêt à faire passer votre marque au niveau supérieur ? Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs de marketing digital.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "fullName": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "sendMessage": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "placeholder": {
+        "fullName": "Jean Dupont",
+        "email": "jean@exemple.com",
+        "phone": "+212 625-625-625",
+        "message": "Parlez-nous de votre projet..."
+      },
+      "success": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "businessHours": "Heures d'ouverture",
+      "addressLine1": "123 Rue des Affaires",
+      "addressLine2": "Ville, Pays 12345",
+      "hoursWeekday": "Lundi - Vendredi : 9h00 - 18h00",
+      "hoursWeekend": "Samedi - Dimanche : Fermé",
+      "mapsPlaceholder": "Intégration Google Maps"
+    }
   }
 }
