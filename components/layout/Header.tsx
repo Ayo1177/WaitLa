@@ -127,7 +127,7 @@ export default function Header() {
         <div className="flex items-center lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
-              src="/logo.jpg"
+              src="/white_logo.svg"
               alt="WaitLa logo"
               width={140}
               height={40}
@@ -298,7 +298,7 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
                 <Image
-                  src="/logo.jpg"
+                  src="/white_logo.svg"
                   alt="WaitLa logo"
                   width={120}
                   height={32}

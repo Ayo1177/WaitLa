@@ -1,0 +1,23 @@
+{
+  "name": "WaitLa - Digital Marketing Agency",
+  "short_name": "WaitLa",
+  "description": "Creative digital marketing agency specializing in web development, mobile apps, digital strategy, and media buying",
+  "icons": [
+    {
+      "src": "/red_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/Logo_hand.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#B91C1C",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait-primary"
+}
+
