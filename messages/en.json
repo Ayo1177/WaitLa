@@ -1382,16 +1382,21 @@
     "description": "Ready to take your brand to the next level? Let's discuss how we can help you achieve your digital marketing goals.",
     "form": {
       "title": "Send us a message",
-      "fullName": "Full Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "email": "Email",
       "phone": "Phone",
+      "companyName": "Company Name",
+      "services": "Services Needed",
       "message": "Message",
       "sendMessage": "Send Message",
       "sending": "Sending...",
       "placeholder": {
-        "fullName": "John Doe",
+        "firstName": "John",
+        "lastName": "Doe",
         "email": "john@example.com",
         "phone": "+212 625-6225-625",
+        "companyName": "Company Inc.",
         "message": "Tell us about your project..."
       },
       "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
