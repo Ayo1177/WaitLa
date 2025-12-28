@@ -13,6 +13,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^3.3.4",
+    "@neondatabase/serverless": "^1.0.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.0",
     "gsap": "^3.14.2",

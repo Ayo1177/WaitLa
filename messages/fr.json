@@ -85,7 +85,7 @@
     "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs de marketing digital. Contactez-nous dès aujourd'hui pour une consultation gratuite.",
     "form": {
       "firstName": "Prénom",
-      "lastName": "Nom de famille",
+      "lastName": "Nom",
       "companyName": "Nom de l'entreprise",
       "location": "Localisation",
       "email": "Email",
@@ -1382,16 +1382,21 @@
     "description": "Prêt à faire passer votre marque au niveau supérieur ? Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs de marketing digital.",
     "form": {
       "title": "Envoyez-nous un message",
-      "fullName": "Nom complet",
+      "firstName": "Prénom",
+      "lastName": "Nom",
       "email": "Email",
       "phone": "Téléphone",
+      "companyName": "Nom de l'entreprise",
+      "services": "Services nécessaires",
       "message": "Message",
       "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
       "placeholder": {
-        "fullName": "Jean Dupont",
+        "firstName": "Jean",
+        "lastName": "Dupont",
         "email": "jean@exemple.com",
         "phone": "+212 625-6225-625",
+        "companyName": "Entreprise Inc.",
         "message": "Parlez-nous de votre projet..."
       },
       "success": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",

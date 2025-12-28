@@ -1,23 +1,40 @@
 import { z } from "zod";
 
 export const contactFormSchema = z.object({
-  name: z
+  firstName: z
     .string()
-    .min(2, "Name must be at least 2 characters")
-    .max(100, "Name must be less than 100 characters"),
+    .min(2, "First name must be at least 2 characters")
+    .max(50, "First name must be less than 50 characters"),
+  lastName: z
+    .string()
+    .min(2, "Last name must be at least 2 characters")
+    .max(50, "Last name must be less than 50 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z
     .string()
     .regex(
       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
       "Please enter a valid phone number"
+    ),
+  companyName: z
+    .string()
+    .min(2, "Company name must be at least 2 characters")
+    .max(100, "Company name must be less than 100 characters")
+    .optional()
+    .or(z.literal("")),
+  services: z
+    .array(z.string())
+    .optional()
+    .default([]),
+  message: z
+    .string()
+    .max(1000, "Message must be less than 1000 characters")
+    .refine(
+      (val) => val === "" || val.length >= 10,
+      "Message must be at least 10 characters if provided"
     )
     .optional()
     .or(z.literal("")),
-  message: z
-    .string()
-    .min(10, "Message must be at least 10 characters")
-    .max(1000, "Message must be less than 1000 characters"),
   // Honeypot field for spam protection
   website: z.string().max(0, "Spam detected").optional(),
 });
