@@ -2,19 +2,19 @@
 
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
   {
     name: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/waitla/",
     icon: Linkedin,
   },
   {
-    name: "Twitter",
-    href: "#",
-    icon: Twitter,
+    name: "Instagram",
+    href: "https://www.instagram.com/waitla.service?igsh=MXgzbnpldHh0Mm45aQ==",
+    icon: Instagram,
   },
 ];
 
@@ -25,6 +25,7 @@ export default function Footer() {
     company: [
       { nameKey: "company.about", href: "/about" },
       { nameKey: "company.team", href: "/team" },
+      { nameKey: "company.services", href: "/#services" },
       { nameKey: "company.portfolio", href: "/portfolio" },
       { nameKey: "company.contact", href: "/contact" },
     ],
@@ -60,6 +61,8 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
                   aria-label={item.name}
                 >
@@ -93,26 +96,36 @@ export default function Footer() {
             <ul role="list" className="mt-6 space-y-4">
               <li>
                 <a
-                  href="mailto:contact@waitla.com"
+                  href="mailto:contact.waitla@gmail.com"
                   className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
                 >
                   <Mail className="h-4 w-4 flex-shrink-0" />
-                  <span className="break-words">contact@waitla.com</span>
+                  <span className="break-words">contact.waitla@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+1234567890"
-                  className="group flex items-center gap-2 text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
-                >
-                  <Phone className="h-4 w-4 flex-shrink-0" />
-                  <span>+1 (234) 567-890</span>
-                </a>
+                <div className="flex items-start gap-2">
+                  <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <div className="space-y-1">
+                    <a
+                      href="tel:+212603046155"
+                      className="block text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
+                    >
+                      +212 603046155
+                    </a>
+                    <a
+                      href="tel:+212782842180"
+                      className="block text-sm leading-6 text-white opacity-70 hover:opacity-100 transition-opacity duration-200"
+                    >
+                      +212 782842180
+                    </a>
+                  </div>
+                </div>
               </li>
               <li>
                 <div className="flex items-start gap-2 text-sm leading-6 text-gray-300">
                   <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                  <span className="break-words">123 Business St, City, Country</span>
+                  <span className="break-words">Mohammedia</span>
                 </div>
               </li>
             </ul>

@@ -118,6 +118,7 @@
       "title": "Entreprise",
       "about": "À propos",
       "team": "Équipe",
+      "services": "Services",
       "portfolio": "Portfolio",
       "contact": "Contact"
     },
@@ -1390,7 +1391,7 @@
       "placeholder": {
         "fullName": "Jean Dupont",
         "email": "jean@exemple.com",
-        "phone": "+212 625-625-625",
+        "phone": "+212 625-6225-625",
         "message": "Parlez-nous de votre projet..."
       },
       "success": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",

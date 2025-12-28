@@ -1,0 +1,26 @@
+{
+  "reels": [
+    {
+      "id": 1,
+      "title": "V1 Waitla Site",
+      "video": "/reels/v1 waitla site .mp4",
+      "thumbnail": "",
+      "client": "WaitLa Campaign"
+    },
+    {
+      "id": 2,
+      "title": "V1 Waitla Site 3",
+      "video": "/reels/v1 waitla site  (3).mp4",
+      "thumbnail": "",
+      "client": "WaitLa Campaign"
+    },
+    {
+      "id": 3,
+      "title": "V1 Waitla Site 4",
+      "video": "/reels/v1 waitla site  (4).mp4",
+      "thumbnail": "",
+      "client": "WaitLa Campaign"
+    }
+  ]
+}
+
