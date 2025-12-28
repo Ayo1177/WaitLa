@@ -16,7 +16,7 @@ export default function ServiceHero({ variant = "full" }: ServiceHeroProps) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/habillage/habillage%20hero.jpg')",
+            backgroundImage: "url('/habillage/habillage%20hero2.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -30,7 +30,7 @@ export default function ServiceHero({ variant = "full" }: ServiceHeroProps) {
     <section
       className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 pt-32 pb-20 overflow-hidden"
       style={{
-        backgroundImage: "url('/habillage/habillage%20hero.jpg')",
+        backgroundImage: "url('/habillage/habillage%20hero2.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

@@ -137,7 +137,34 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center lg:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
+          {/* Language Toggle - Mobile */}
+          <div className="flex items-center gap-1 rounded-full border border-white/50 bg-white/10 px-1 py-1 text-xs font-semibold uppercase tracking-wide shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+            <button
+              type="button"
+              onClick={() => router.replace(pathname, { locale: "fr" })}
+              className={cn(
+                "rounded-full px-3 py-1 transition hourglass-effect",
+                locale === "fr"
+                  ? "bg-white text-primary-dark"
+                  : "text-white/80 hover:bg-white/10"
+              )}
+            >
+              FR
+            </button>
+            <button
+              type="button"
+              onClick={() => router.replace(pathname, { locale: "en" })}
+              className={cn(
+                "rounded-full px-3 py-1 transition hourglass-effect",
+                locale === "en"
+                  ? "bg-white text-primary-dark"
+                  : "text-white/80 hover:bg-white/10"
+              )}
+            >
+              EN
+            </button>
+          </div>
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-white hover:bg-white/10 transition"
@@ -354,7 +381,7 @@ export default function Header() {
                 <div className="py-6">
                   <Link
                     href="/contact"
-                    className="block rounded-full bg-gradient-to-r from-[#b12aff] via-[#9827f4] to-[#6d12d2] px-4 py-3 text-center text-sm font-semibold text-white shadow-md hover:scale-[1.01] transition"
+                    className="block rounded-full bg-gradient-to-r from-primary via-primary-dark to-[#8a1c1a] px-4 py-3 text-center text-sm font-semibold text-white shadow-[0_0_20px_rgba(229,57,53,0.5),0_0_40px_rgba(229,57,53,0.3)] hover:shadow-[0_0_30px_rgba(229,57,53,0.8),0_0_60px_rgba(229,57,53,0.5),0_0_90px_rgba(229,57,53,0.3)] hover:scale-105 transition-all duration-300 hover:-translate-y-1 active:scale-100 active:translate-y-0"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {tNav("contactCta")}

@@ -137,14 +137,13 @@ export default function AboutUs() {
           </motion.div>
         </div>
 
-        {/* KPIs positioned in an arc pattern */}
-        <div ref={kpiRef} className="relative mt-16 lg:mt-24 flex justify-center">
-          {/* Single column layout for screens narrower than two bubbles width */}
-          <div className="flex flex-col gap-8 max-[450px]:flex min-[450px]:hidden w-full max-w-xs">
+        {/* KPIs with responsive layouts that prevent overlap */}
+        <div ref={kpiRef} className="relative mt-16 lg:mt-24">
+          {/* Mobile: Single column (< 450px) */}
+          <div className="flex flex-col items-center gap-6 min-[450px]:hidden">
             {kpis.map((kpi, index) => (
               <motion.div
                 key={index}
-                className="flex justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={
                   kpisInView
@@ -158,95 +157,155 @@ export default function AboutUs() {
                   stiffness: 100,
                 }}
               >
-                <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
                   <CountUpNumber kpi={kpi} isInView={kpisInView} label={t(kpi.labelKey)} />
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Arc layout for screens wider than two bubbles width */}
-          <div className="hidden min-[450px]:block relative w-full max-w-6xl h-[400px] md:h-72 lg:h-96">
-            {/* KPI 1 - Left side of arc (lower) */}
+          {/* Small tablets: Arc layout (450px - 767px) */}
+          <div className="hidden min-[450px]:flex md:hidden justify-center items-end gap-2 min-[500px]:gap-3 min-[600px]:gap-4 h-64 min-[550px]:h-72">
+            {/* KPI 1 - Left (lower) */}
             <motion.div
-              className="absolute left-[8%] md:left-[5%] bottom-0 md:bottom-0 -translate-x-1/2"
+              className="self-end"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                kpisInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{
-                duration: 0.6,
-                delay: 0.1,
-                type: "spring",
-                stiffness: 100,
-              }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 }}
             >
-              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
+              <div className="flex h-28 w-28 min-[500px]:h-32 min-[500px]:w-32 min-[600px]:h-36 min-[600px]:w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[0]} isInView={kpisInView} label={t(kpis[0].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 2 - Left-center (higher) */}
+            <motion.div
+              className="self-start"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-28 w-28 min-[500px]:h-32 min-[500px]:w-32 min-[600px]:h-36 min-[600px]:w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[1]} isInView={kpisInView} label={t(kpis[1].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 3 - Right-center (higher) */}
+            <motion.div
+              className="self-start"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-28 w-28 min-[500px]:h-32 min-[500px]:w-32 min-[600px]:h-36 min-[600px]:w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[2]} isInView={kpisInView} label={t(kpis[2].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 4 - Right (lower) */}
+            <motion.div
+              className="self-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-28 w-28 min-[500px]:h-32 min-[500px]:w-32 min-[600px]:h-36 min-[600px]:w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[3]} isInView={kpisInView} label={t(kpis[3].labelKey)} />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Medium tablets: Arc layout (768px - 1023px) */}
+          <div className="hidden md:flex lg:hidden justify-center items-end gap-4 h-72">
+            {/* KPI 1 - Left (lower) */}
+            <motion.div
+              className="self-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[0]} isInView={kpisInView} label={t(kpis[0].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 2 - Left-center (higher) */}
+            <motion.div
+              className="self-start"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[1]} isInView={kpisInView} label={t(kpis[1].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 3 - Right-center (higher) */}
+            <motion.div
+              className="self-start"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[2]} isInView={kpisInView} label={t(kpis[2].labelKey)} />
+              </div>
+            </motion.div>
+            {/* KPI 4 - Right (lower) */}
+            <motion.div
+              className="self-end"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
+                <CountUpNumber kpi={kpis[3]} isInView={kpisInView} label={t(kpis[3].labelKey)} />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop: Arc layout (≥1024px) - using flexbox with controlled spacing */}
+          <div className="hidden lg:flex justify-center items-end gap-6 xl:gap-8 h-80 xl:h-96">
+            {/* KPI 1 - Left (lower) */}
+            <motion.div
+              className="self-end mb-0"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.1, type: "spring", stiffness: 100 }}
+            >
+              <div className="flex h-44 w-44 xl:h-52 xl:w-52 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
                 <CountUpNumber kpi={kpis[0]} isInView={kpisInView} label={t(kpis[0].labelKey)} />
               </div>
             </motion.div>
 
-            {/* KPI 2 - Left-center of arc (higher) */}
+            {/* KPI 2 - Left-center (higher) */}
             <motion.div
-              className="absolute left-[22%] md:left-[28%] bottom-36 md:bottom-10 lg:bottom-16 -translate-x-1/2"
+              className="self-start mt-0"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                kpisInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{
-                duration: 0.6,
-                delay: 0.2,
-                type: "spring",
-                stiffness: 100,
-              }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 100 }}
             >
-              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
+              <div className="flex h-44 w-44 xl:h-52 xl:w-52 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
                 <CountUpNumber kpi={kpis[1]} isInView={kpisInView} label={t(kpis[1].labelKey)} />
               </div>
             </motion.div>
 
-            {/* KPI 3 - Right-center of arc (higher) */}
+            {/* KPI 3 - Right-center (higher) */}
             <motion.div
-              className="absolute right-[22%] md:right-[28%] bottom-36 md:bottom-10 lg:bottom-16 translate-x-1/2"
+              className="self-start mt-0"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                kpisInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{
-                duration: 0.6,
-                delay: 0.3,
-                type: "spring",
-                stiffness: 100,
-              }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.3, type: "spring", stiffness: 100 }}
             >
-              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
+              <div className="flex h-44 w-44 xl:h-52 xl:w-52 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
                 <CountUpNumber kpi={kpis[2]} isInView={kpisInView} label={t(kpis[2].labelKey)} />
               </div>
             </motion.div>
 
-            {/* KPI 4 - Right side of arc (lower) */}
+            {/* KPI 4 - Right (lower) */}
             <motion.div
-              className="absolute right-[8%] md:right-[5%] bottom-0 md:bottom-0 translate-x-1/2"
+              className="self-end mb-0"
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                kpisInView
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.9 }
-              }
-              transition={{
-                duration: 0.6,
-                delay: 0.4,
-                type: "spring",
-                stiffness: 100,
-              }}
+              animate={kpisInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 100 }}
             >
-              <div className="flex h-40 w-40 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)] sm:h-44 sm:w-44 lg:h-56 lg:w-56">
+              <div className="flex h-44 w-44 xl:h-52 xl:w-52 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-dark shadow-[0_10px_40px_rgba(229,57,53,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_20px_60px_rgba(229,57,53,0.6)]">
                 <CountUpNumber kpi={kpis[3]} isInView={kpisInView} label={t(kpis[3].labelKey)} />
               </div>
             </motion.div>

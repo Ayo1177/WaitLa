@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/forms/ContactForm";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Instagram, Share2 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
@@ -39,79 +39,91 @@ export default async function ContactPage({
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                {t("form.title")}
-              </h2>
-              <ContactForm />
-            </div>
+          {/* Contact Form Section */}
+          <div className="mx-auto mt-16 max-w-2xl">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              {t("form.title")}
+            </h2>
+            <ContactForm />
+          </div>
 
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                {t("info.title")}
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900">{t("info.email")}</h3>
+          {/* Contact Information Section */}
+          <div className="mx-auto mt-16 max-w-2xl">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              {t("info.title")}
+            </h2>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">{t("info.email")}</h3>
+                  <a
+                    href="mailto:contact.waitla@gmail.com"
+                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                  >
+                    contact.waitla@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">{t("info.phone")}</h3>
+                  <div className="space-y-1">
                     <a
-                      href="mailto:contact@waitla.com"
-                      className="text-sm text-gray-600 hover:text-primary transition-colors"
+                      href="tel:+212603046155"
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
                     >
-                      contact@waitla.com
+                      +212 603046155
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900">{t("info.phone")}</h3>
                     <a
-                      href="tel:+1234567890"
-                      className="text-sm text-gray-600 hover:text-primary transition-colors"
+                      href="tel:+212782842180"
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors"
                     >
-                      +1 (234) 567-890
+                      +212 782842180
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900">
-                      {t("info.address")}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {t("info.addressLine1")}
-                      <br />
-                      {t("info.addressLine2")}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900">
-                      {t("info.businessHours")}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      {t("info.hoursWeekday")}
-                      <br />
-                      {t("info.hoursWeekend")}
-                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Google Maps placeholder */}
-              <div className="mt-8 h-64 rounded-lg bg-gray-200 flex items-center justify-center">
-                <p className="text-sm text-gray-500">{t("info.mapsPlaceholder")}</p>
+              <div className="flex items-start gap-4">
+                <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">
+                    {t("info.address")}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Mohammedia
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Share2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900 mb-2">Réseaux sociaux</h3>
+                  <div className="space-y-2">
+                    <a
+                      href="https://www.linkedin.com/company/waitla/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://www.instagram.com/waitla.service?igsh=MXgzbnpldHh0Mm45aQ=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-gray-600 hover:text-primary transition-colors flex items-center gap-2"
+                    >
+                      <Instagram className="h-5 w-5" />
+                      Instagram
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

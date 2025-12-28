@@ -118,6 +118,7 @@
       "title": "Company",
       "about": "About",
       "team": "Team",
+      "services": "Services",
       "portfolio": "Portfolio",
       "contact": "Contact"
     },
@@ -1390,7 +1391,7 @@
       "placeholder": {
         "fullName": "John Doe",
         "email": "john@example.com",
-        "phone": "+1 (234) 567-890",
+        "phone": "+212 625-6225-625",
         "message": "Tell us about your project..."
       },
       "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",

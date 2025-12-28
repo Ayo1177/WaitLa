@@ -318,7 +318,7 @@ export default function PrintingAndBrandingPage() {
         <section
           className="relative z-10 py-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden"
           style={{
-            backgroundImage: "url('/habillage/habillage%20hero.jpg')",
+            backgroundImage: "url('/habillage/habillage%20hero2.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
